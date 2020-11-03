@@ -103,9 +103,9 @@ Material:
     - KaleidoscopeUV_Number_1: 1.65
     - KaleidoscopeUV_PosX_1: 0.5
     - KaleidoscopeUV_PosY_1: 0.5
-    - LiquidUV_DistanceX_1: 0.15
-    - LiquidUV_DistanceY_1: 0.15
-    - LiquidUV_Speed_1: 1.6
+    - LiquidUV_DistanceX_1: 0.17
+    - LiquidUV_DistanceY_1: 0.17
+    - LiquidUV_Speed_1: 1.7
     - LiquidUV_WaveX_1: 2
     - LiquidUV_WaveY_1: 2
     - Parasite_Angle: -0.241

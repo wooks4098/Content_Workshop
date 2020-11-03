@@ -19,13 +19,14 @@ public class Player_1P : MonoBehaviour
     public float BulletPower;//총알 파워
 
     Rigidbody2D rigid;//물리
-
+    Animator anim;//애니메이션
    
 
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -45,7 +46,7 @@ public class Player_1P : MonoBehaviour
 
     void Shoot()
     {
-        if (!Input.GetKey(KeyCode.U))
+        if (!Input.GetKey(KeyCode.U) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.V))
             return;
 
         if (curShotDelay < maxShotDelay)
@@ -65,16 +66,26 @@ public class Player_1P : MonoBehaviour
 
     void Move()
     {
+        if (rigid.velocity.y != 0)
+            anim.SetBool("IsJump", true);
+        else if(rigid.velocity.y == 0 && rigid.velocity.x == 0)
+        {
+            anim.SetBool("IsWalk", false);
+            anim.SetBool("IsJump", false);
+        }
+
         //이동
         if (Input.GetKey(KeyCode.A))
         {
             gameObject.transform.position += Vector3.left * Speed * Time.deltaTime;
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            anim.SetBool("IsWalk", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.transform.position += Vector3.right * Speed * Time.deltaTime;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            anim.SetBool("IsWalk", true);
         }
 
         //점프

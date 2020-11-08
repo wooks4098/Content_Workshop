@@ -6,6 +6,8 @@ public class Potal : MonoBehaviour
 {
     public bool Player1Check;
     public bool Player2Check;
+    public string SceneName;
+    
 
     private void Start()
     {
@@ -15,8 +17,12 @@ public class Potal : MonoBehaviour
 
     private void Update()
     {
-        if(Player1Check && Player2Check)
-            SceneManager.LoadScene("Title");
+        
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene(SceneName);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +34,13 @@ public class Potal : MonoBehaviour
 
         if(collision.gameObject.tag == "Player2")
             Player2Check = true;
+
+        if (Player1Check && Player2Check)
+        {
+            GameObject.Find("Canvas").GetComponent<FadeFlow>().FadeOut();
+            Invoke("ChangeScene", 1f);
+        }
+
 
     }
 }

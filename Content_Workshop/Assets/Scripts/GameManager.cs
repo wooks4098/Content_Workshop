@@ -1,15 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public bool Player1Check;
-    public bool Player2Check;
+    private static GameManager instance = null;
 
-    private void Start()
+    public Image im;
+    
+
+
+
+
+    void Awake()
     {
-        Player1Check = false;
-        Player2Check = false;
+        if (null == instance)
+        {
+            instance = this;   
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        GameObject.Find("Canvas").GetComponent<FadeFlow>().FadeIn();
+
     }
+
+    public static GameManager Instance
+    {
+        get
+        {
+            if (null == instance)
+            {
+                return null;
+            }
+            return instance;
+        }
+    }
+
+    
+
 }

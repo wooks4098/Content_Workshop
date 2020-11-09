@@ -9,6 +9,7 @@ public class Player_1P : MonoBehaviour
     public float JumpPower;//점프파워
     public int JumpCount;//점프카운트
     public LayerMask PlatFormCheck_Layer;//플랫폼 체크 레이어
+    public LayerMask Object_Layer;//오브젝트 레이어
     public GameObject TileCheck; //플랫폼 체크 위치
 
     public GameObject Gun_Position;//버블건 위치
@@ -91,7 +92,8 @@ public class Player_1P : MonoBehaviour
         //점프
         if (rigid.velocity.y <= 0)//레이캐스트를 사용하여 타일에 닿았는지 확인
         {
-            if(Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer))
+            if(Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer) 
+                || Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, Object_Layer))
                 JumpCount = 1;
         }
             //isJump = Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer);
@@ -104,7 +106,5 @@ public class Player_1P : MonoBehaviour
         Debug.DrawRay(TileCheck.transform.position, Vector2.down * 0.15f, Color.red);//레이케스트 보여주는 코드
 
     }
-
-
 
 }

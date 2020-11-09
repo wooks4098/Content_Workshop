@@ -7,6 +7,8 @@ TagManager:
   - Tile
   - Wall
   - Player2
+  - Bullet
+  - Object
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - 2Player
   - DreamWall
   - 2P_PlatFrom
-  - 
+  - Object
   - 
   - 
   - 

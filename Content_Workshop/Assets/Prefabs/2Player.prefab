@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3551233614117194328, guid: 2d2a386355c5fea499359b1c2d082d51,
+  m_Sprite: {fileID: -1321795784947842116, guid: b0908e498058e3449a7b30e6df909940,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -182,6 +182,9 @@ MonoBehaviour:
   PlatFormCheck_Layer:
     serializedVersion: 2
     m_Bits: 256
+  Object_Layer:
+    serializedVersion: 2
+    m_Bits: 12288
   TileCheck: {fileID: 1257302735636727245}
 --- !u!95 &1257302736897368823
 Animator:

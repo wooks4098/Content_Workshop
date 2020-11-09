@@ -9,6 +9,7 @@ TagManager:
   - Player2
   - Bullet
   - Object
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ public class Door : MonoBehaviour
 {
     public string Dore_Color; //문 특성
     public bool IsRight;//시계방향으로 도는지 True면 시계방향으로
+    public GameObject DoorCenter;//문 중심축
+
 
     public void FadeIn()
     {
@@ -16,17 +18,16 @@ public class Door : MonoBehaviour
         float FadeOut_Time = 0f;
         float FadeOut_TimeCheck = 0.7f;
         float angle = 0;
-        float angle2 = 0;
         Vector3 N_angle;
-        N_angle = transform.rotation.eulerAngles;
+        N_angle = DoorCenter.transform.rotation.eulerAngles;
         while (angle < 90f)
         {
             FadeOut_Time += Time.deltaTime / FadeOut_TimeCheck;
             angle = Mathf.Lerp(0, 90, FadeOut_Time);
             if(IsRight)
-                transform.rotation = Quaternion.AngleAxis(N_angle.z + angle, Vector3.forward);
+                DoorCenter.transform.rotation = Quaternion.AngleAxis(N_angle.z + angle, Vector3.forward);
             else
-                transform.rotation = Quaternion.AngleAxis(N_angle.z - angle, Vector3.forward);
+                DoorCenter.transform.rotation = Quaternion.AngleAxis(N_angle.z - angle, Vector3.forward);
 
             yield return null;
         }

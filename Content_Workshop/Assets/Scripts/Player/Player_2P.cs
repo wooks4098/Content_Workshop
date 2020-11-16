@@ -59,7 +59,12 @@ public class Player_2P : MonoBehaviour
         {
             if (Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer)
                 ||  Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, Object_Layer))
+            {
                 JumpCount = 2;
+                anim.SetBool("Is2Jump", false);
+                anim.SetBool("IsJump", false);
+                
+            }
         }
         if (Input.GetKey(KeyCode.RightShift) && JumpCount >= 1 && Jump_timecheck >= 0.3f)
         {

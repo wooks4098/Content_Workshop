@@ -67,14 +67,15 @@ public class Player_1P : MonoBehaviour
 
     void Move()
     {
-        if (rigid.velocity.y != 0)
-            anim.SetBool("IsJump", true);
-        else if(rigid.velocity.y == 0 && rigid.velocity.x == 0)
+        
+        if((rigid.velocity.y == 0 && rigid.velocity.x == 0))
         {
             anim.SetBool("IsWalk", false);
             anim.SetBool("IsJump", false);
         }
 
+        //if (rigid.velocity.y != 0)
+        //    anim.SetBool("IsJump", true);
         //이동
         if (Input.GetKey(KeyCode.A))
         {
@@ -88,13 +89,20 @@ public class Player_1P : MonoBehaviour
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             anim.SetBool("IsWalk", true);
         }
+        if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+            anim.SetBool("IsWalk", false);
 
         //점프
         if (rigid.velocity.y <= 0)//레이캐스트를 사용하여 타일에 닿았는지 확인
         {
-            if(Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer) 
+            if (Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer)
                 || Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, Object_Layer))
+            {
                 JumpCount = 1;
+                anim.SetBool("IsJump", false);
+            }
+
+           
         }
             //isJump = Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer);
         if (Input.GetKey(KeyCode.Space) && JumpCount >= 1)
@@ -102,7 +110,9 @@ public class Player_1P : MonoBehaviour
             rigid.velocity = Vector2.zero;
             rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             JumpCount--;
+            anim.SetBool("IsJump", true);
         }
+
         Debug.DrawRay(TileCheck.transform.position, Vector2.down * 0.15f, Color.red);//레이케스트 보여주는 코드
 
     }

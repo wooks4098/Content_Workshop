@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_1P : MonoBehaviour
 {
-    public int HP;
+    public static int HP;
     public float Speed;//이동속도
     public float JumpPower;//점프파워
     public int JumpCount;//점프카운트
@@ -29,7 +29,7 @@ public class Player_1P : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        HP = 2;
+
     }
 
     private void FixedUpdate()
@@ -148,6 +148,7 @@ public class Player_1P : MonoBehaviour
     {
         gameObject.SetActive(false);
         GameManager.instance.Die();
+        HP = 2;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -34,13 +34,25 @@ public class Potal : MonoBehaviour
 
         if(collision.gameObject.tag == "Player2")
             Player2Check = true;
-
-        if (Player1Check && Player2Check)
+        if(SceneManager.GetActiveScene().name == "1-1")
         {
-            //GameObject.Find("Canvas").GetComponent<FadeFlow>().FadeOut();
-            GameManager.instance.FadeOut();
-            Invoke("ChangeScene", 1f);
+            if (Player1Check)
+            {
+                //GameObject.Find("Canvas").GetComponent<FadeFlow>().FadeOut();
+                GameManager.instance.FadeOut();
+                Invoke("ChangeScene", 1f);
+            }
         }
+        else
+        {
+            if (Player1Check && Player2Check)
+            {
+                //GameObject.Find("Canvas").GetComponent<FadeFlow>().FadeOut();
+                GameManager.instance.FadeOut();
+                Invoke("ChangeScene", 1f);
+            }
+        }
+        
 
 
     }

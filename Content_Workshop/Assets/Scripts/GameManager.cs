@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
@@ -71,4 +71,13 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    public void Die()
+    {
+        FadeOut();
+        Invoke("SceneReLoad", 1.3f);
+    }
+    void SceneReLoad()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

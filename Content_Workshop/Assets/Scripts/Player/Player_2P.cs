@@ -27,9 +27,9 @@ public class Player_2P : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        Physics2D.IgnoreLayerCollision(10,9);//1P레이어 무시
-        Physics2D.IgnoreLayerCollision(10,11);//꿈의 균열레이어 무시
-        Physics2D.IgnoreLayerCollision(10,8);//타일 레이어 무시
+        //Physics2D.IgnoreLayerCollision(10,9);//1P레이어 무시
+        //Physics2D.IgnoreLayerCollision(10,11);//꿈의 균열레이어 무시
+        //Physics2D.IgnoreLayerCollision(10,8);//타일 레이어 무시
     }
 
     void Move()
@@ -63,7 +63,6 @@ public class Player_2P : MonoBehaviour
                 JumpCount = 2;
                 anim.SetBool("Is2Jump", false);
                 anim.SetBool("IsJump", false);
-                
             }
         }
         if (Input.GetKey(KeyCode.RightShift) && JumpCount >= 1 && Jump_timecheck >= 0.3f)

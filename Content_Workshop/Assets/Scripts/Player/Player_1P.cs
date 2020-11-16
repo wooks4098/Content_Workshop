@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Player_1P : MonoBehaviour
 {
-
+    public int HP;
     public float Speed;//이동속도
     public float JumpPower;//점프파워
     public int JumpCount;//점프카운트
     public LayerMask PlatFormCheck_Layer;//플랫폼 체크 레이어
     public LayerMask Object_Layer;//오브젝트 레이어
     public GameObject TileCheck; //플랫폼 체크 위치
-
+    
     public GameObject Gun_Position;//버블건 위치
     public GameObject Bullet_Prefab;//총알 프리펩
     public float maxShotDelay;//총알 딜레이값
@@ -21,20 +21,22 @@ public class Player_1P : MonoBehaviour
 
     Rigidbody2D rigid;//물리
     Animator anim;//애니메이션
-   
+    SpriteRenderer spriteRenderer;
 
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        HP = 2;
     }
 
     private void FixedUpdate()
     {
         Move();
-        Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
-        Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
+        //Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
+        //Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
         Shoot();
         Reload();
     }
@@ -117,4 +119,42 @@ public class Player_1P : MonoBehaviour
 
     }
 
+    void Damaged(Vector2 TargetPos)
+    {
+        HP--;
+        if(HP == -1)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+            int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
+            rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
+            Invoke("Die", 0.6f);
+        }
+        else
+        {
+            gameObject.layer = 14;
+            spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+            int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
+            rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
+            Invoke("OffDamaged", 1.5f);
+        }
+      
+    }
+    void OffDamaged()
+    {
+        gameObject.layer = 9;
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
+    void Die()
+    {
+        gameObject.SetActive(false);
+        GameManager.instance.Die();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Monster")
+        {
+            Damaged(collision.transform.position);
+
+        }
+    }
 }

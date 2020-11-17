@@ -9,13 +9,16 @@ public class GameManager : MonoBehaviour
 
     public Image FadeOut_Img;
 
-
-
+    static bool Chap_1_ImgCheck = false;
+    public GameObject Chap_1_Image;
+    float time = 0;
 
 
     void Awake()
     {
-
+        if (SceneManager.GetActiveScene().name == "1-1" && Chap_1_ImgCheck)
+            Chap_1_Image.SetActive(false);
+        Chap_1_ImgCheck = true;
         if (instance != null)
         {
             return;
@@ -24,7 +27,13 @@ public class GameManager : MonoBehaviour
 
         FadeIn();
     }
+    private void Update()
+    {
 
+        time += Time.deltaTime;
+        if(SceneManager.GetActiveScene().name == "1-1" && time >=11.3f)
+            Chap_1_Image.SetActive(false);
+    }
     #region Fade In/Out 화면전환효과
     public void FadeOut()
     {
@@ -71,13 +80,13 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public void Die()
-    {
-        FadeOut();
-        Invoke("SceneReLoad", 1.3f);
-    }
-    void SceneReLoad()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    //public void Die()
+    //{
+    //    FadeOut();
+    //    Invoke("SceneReLoad", 1.3f);
+    //}
+    //void SceneReLoad()
+    //{
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //}
 }

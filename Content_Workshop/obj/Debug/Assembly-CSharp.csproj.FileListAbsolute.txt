@@ -922,3 +922,8 @@ G:\GitHub\Content_Workshop\Content_Workshop\obj\Debug\Assembly-CSharp.csproj.Cor
 G:\GitHub\Content_Workshop\Content_Workshop\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 G:\GitHub\Content_Workshop\Content_Workshop\obj\Debug\Assembly-CSharp.dll
 G:\GitHub\Content_Workshop\Content_Workshop\obj\Debug\Assembly-CSharp.pdb
+G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.dll
+G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\Unity.2D.Tilemap.Extras.Editor.pdb
+G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\Unity.2D.Tilemap.Extras.pdb
+G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.pdb
+G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.xml

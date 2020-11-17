@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player_1P : MonoBehaviour
 {
     public static int HP;
+    public int ShowHP;//HP보는용도
     public float Speed;//이동속도
     public float JumpPower;//점프파워
     public int JumpCount;//점프카운트
@@ -30,6 +31,7 @@ public class Player_1P : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        Player_HpSet();
     }
 
     private void FixedUpdate()
@@ -39,8 +41,23 @@ public class Player_1P : MonoBehaviour
         //Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
         Shoot();
         Reload();
+        ShowHP = HP;
     }
 
+    void Player_HpSet()//초기값 세팅
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "1-1":
+            case "2-1":
+            case "3-1":
+                HP = 2;
+                break;
+
+        }
+    }
+
+    #region 버블건 함수
     void Reload()
     {
         curShotDelay += Time.deltaTime;
@@ -66,7 +83,9 @@ public class Player_1P : MonoBehaviour
         curShotDelay = 0;
 
     }
+    #endregion
 
+    #region 움직임
     void Move()
     {
         
@@ -118,7 +137,9 @@ public class Player_1P : MonoBehaviour
         Debug.DrawRay(TileCheck.transform.position, Vector2.down * 0.15f, Color.red);//레이케스트 보여주는 코드
 
     }
+    #endregion
 
+    #region 데미지
     void Damaged(Vector2 TargetPos)
     {
         HP--;
@@ -139,17 +160,27 @@ public class Player_1P : MonoBehaviour
         }
       
     }
-    void OffDamaged()
+    void OffDamaged()//데미지 종료
     {
         gameObject.layer = 9;
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
-    void Die()
+    void Die()//죽음
     {
         gameObject.SetActive(false);
-        GameManager.instance.Die();
+        GameManager.instance.FadeOut();
+        Invoke("SceneLoad", 1.3f);
         HP = 2;
     }
+
+    void SceneLoad()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    #endregion
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Monster")

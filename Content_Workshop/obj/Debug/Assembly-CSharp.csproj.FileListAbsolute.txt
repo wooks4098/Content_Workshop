@@ -927,3 +927,12 @@ G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\Unity.2D.Tilemap.Extr
 G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\Unity.2D.Tilemap.Extras.pdb
 G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.pdb
 G:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.xml
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.dll
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\Unity.2D.Tilemap.Extras.Editor.pdb
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\Unity.2D.Tilemap.Extras.pdb
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.pdb
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.pdb
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.pdb
+D:\GitHub\Content_Workshop\Content_Workshop\Temp\bin\Debug\nunit.framework.xml

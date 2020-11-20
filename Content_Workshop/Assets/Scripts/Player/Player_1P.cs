@@ -57,7 +57,7 @@ public class Player_1P : MonoBehaviour
         }
     }
 
-    #region 버블건 함수
+    #region 버블건 
     void Reload()
     {
         curShotDelay += Time.deltaTime;
@@ -72,7 +72,7 @@ public class Player_1P : MonoBehaviour
         if (curShotDelay < maxShotDelay)
             return;
 
-        GameObject bullet = bulletManager.MakeBullet();//총알 생성
+        GameObject bullet = bulletManager.MakeBullet("Player");//총알 생성
         bullet.transform.position = Gun_Position.transform.position;//총알 위치 지정
 
         Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();

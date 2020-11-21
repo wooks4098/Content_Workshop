@@ -185,5 +185,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dore_Color: Red
-  IsRight: 0
+  IsRight: 1
   DoorCenter: {fileID: 4599270138053535868}

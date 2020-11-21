@@ -37,8 +37,8 @@ public class Player_1P : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        //Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
-        //Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
+        Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
+        Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
         Shoot();
         Reload();
         ShowHP = HP;
@@ -154,6 +154,7 @@ public class Player_1P : MonoBehaviour
         {
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
+            
             rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
             Invoke("Die", 0.6f);
         }
@@ -162,7 +163,10 @@ public class Player_1P : MonoBehaviour
             gameObject.layer = 14;
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
-            rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
+            if (SceneManager.GetActiveScene().name == "Boss" || SceneManager.GetActiveScene().name == "InGame")
+                rigid.AddForce(new Vector2(-1, 1) * 20, ForceMode2D.Impulse);
+            else
+                rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
             Invoke("OffDamaged", 1.5f);
         }
       
@@ -191,6 +195,14 @@ public class Player_1P : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Monster")
+        {
+            Damaged(collision.transform.position);
+
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Monster")
         {
             Damaged(collision.transform.position);
 

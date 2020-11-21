@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: 1843a9448bd11c041bd142134a44ad89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5453845455855292032
+    second: portalv2_0
+  - first:
+      213: 7179417926873089011
+    second: portalv2_1
+  - first:
+      213: 645152614196325513
+    second: portalv2_2
+  - first:
+      213: 947033494100932336
+    second: portalv2_3
+  - first:
+      213: -8874892387557264091
+    second: portalv2_4
+  - first:
+      213: -2587545100491879741
+    second: portalv2_5
+  - first:
+      213: -8867952703454128277
+    second: portalv2_6
+  - first:
+      213: -6633312490475117670
+    second: portalv2_7
+  - first:
+      213: 2823055947572636813
+    second: portalv2_8
+  - first:
+      213: 2739771458160283014
+    second: portalv2_9
+  - first:
+      213: 3547754056659937415
+    second: portalv2_10
+  - first:
+      213: 4952591103723849300
+    second: portalv2_11
+  - first:
+      213: -9074112570435989504
+    second: portalv2_12
+  - first:
+      213: 2926457280183715565
+    second: portalv2_13
+  - first:
+      213: 2006863303611124914
+    second: portalv2_14
+  - first:
+      213: -1132538585005060712
+    second: portalv2_15
+  - first:
+      213: 9180247887071796061
+    second: portalv2_16
+  - first:
+      213: -5704831783176243185
+    second: portalv2_17
+  - first:
+      213: -3808369334339390643
+    second: portalv2_18
+  - first:
+      213: -6126474568363468450
+    second: portalv2_19
+  - first:
+      213: 7513206119928923936
+    second: portalv2_20
+  - first:
+      213: 6937637237876420755
+    second: portalv2_21
+  - first:
+      213: -5723527018322431245
+    second: portalv2_22
+  - first:
+      213: 2354734172356585548
+    second: portalv2_23
+  - first:
+      213: -6008260887899869368
+    second: portalv2_24
+  - first:
+      213: -7608212395812097595
+    second: portalv2_25
+  - first:
+      213: 3184245447992183856
+    second: portalv2_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portalv2_5
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 55
+        width: 131
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca01e4c071371cd0800000000000000
+      internalID: -2587545100491879741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalv2_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 52
+        width: 140
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cee185d628d2720800000000000000
+      internalID: 2823055947572636813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalv2_10
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 55
+        width: 129
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788aaa984872c3130800000000000000
+      internalID: 3547754056659937415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalv2_13
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 62
+        width: 159
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6c4bb246ddc9820800000000000000
+      internalID: 2926457280183715565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

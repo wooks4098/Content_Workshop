@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
 
     static bool Chap_1_ImgCheck = false;
     public GameObject Chap_1_Image;
-    float time = 0;
+    public GameObject Chap_2_Image;
+    public GameObject Player2;
+
+    public float time = 0;
 
 
     void Awake()
@@ -33,6 +36,17 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
         if(SceneManager.GetActiveScene().name == "1-1" && time >=11.3f)
             Chap_1_Image.SetActive(false);
+        if(SceneManager.GetActiveScene().name == "2-1")
+        {
+            if(time>= 5)
+                Chap_2_Image.SetActive(true);
+            if (time > 19)
+            {
+                Player2.SetActive(true);
+                Chap_2_Image.SetActive(false);
+            }
+
+        }
     }
     #region Fade In/Out 화면전환효과
     public void FadeOut()

@@ -129,11 +129,11 @@ Material:
     - _Emboss_Intensity_1: 0.18
     - _Emboss_grayfade_1: 1.28
     - _Emboss_original_1: 1
-    - _GhostFX_ClipDown_1: 0.704512
-    - _GhostFX_ClipLeft_1: 0.566
-    - _GhostFX_ClipRight_1: 0.433
-    - _GhostFX_ClipUp_1: 0.705
-    - _GhostFX_Smooth_1: 0.488
+    - _GhostFX_ClipDown_1: 0.967
+    - _GhostFX_ClipLeft_1: 0.917
+    - _GhostFX_ClipRight_1: 0.839
+    - _GhostFX_ClipUp_1: 0.884
+    - _GhostFX_Smooth_1: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -149,7 +149,7 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpriteFade: 1
+    - _SpriteFade: 0.738
     - _SrcBlend: 1
     - _Stencil: 0
     - _StencilComp: 8

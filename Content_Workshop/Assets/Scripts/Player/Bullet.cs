@@ -21,7 +21,8 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Tile"|| collision.gameObject.tag == "Object" || collision.gameObject.tag == "Monster")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Tile"|| collision.gameObject.tag == "Object" 
+            || collision.gameObject.tag == "Monster"|| collision.gameObject.tag == "Boss")//
             gameObject.SetActive(false);
     }
    

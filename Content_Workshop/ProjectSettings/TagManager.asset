@@ -11,6 +11,7 @@ TagManager:
   - Object
   - Door
   - Monster
+  - Boss
   layers:
   - Default
   - TransparentFX

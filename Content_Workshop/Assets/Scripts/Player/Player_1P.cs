@@ -55,6 +55,13 @@ public class Player_1P : MonoBehaviour
                 break;
 
         }
+        if(SceneManager.GetActiveScene().name == "Boss"||SceneManager.GetActiveScene().name == "InGame")
+        {
+            HP = 10;
+            BulletPower = 50;
+        }
+
+
     }
 
     #region 버블건 

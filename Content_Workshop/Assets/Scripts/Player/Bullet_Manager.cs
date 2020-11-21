@@ -13,7 +13,7 @@ public class Bullet_Manager : MonoBehaviour
     private void Awake()
     {
         Bullet = new GameObject[20];
-        Boss_Bullet = new GameObject[100];
+        Boss_Bullet = new GameObject[360];
         Generate();
     }
 
@@ -55,7 +55,6 @@ public class Bullet_Manager : MonoBehaviour
                     if (Boss_Bullet[i].activeSelf == false)
                     {
                         Boss_Bullet[i].SetActive(true);
-                        Boss_Bullet[i].GetComponent<Bullet>().Appear();
                         return Boss_Bullet[i];
                     }
                 }

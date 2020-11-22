@@ -71,7 +71,7 @@ public class Player_2P : MonoBehaviour
                 anim.SetBool("IsJump", true);
             else
                 anim.SetBool("Is2Jump", true);
-
+            SoundManager.instance.SoundPlay("Jump");
             rigid.velocity = Vector2.zero;
             rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             JumpCount--;

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
+    BGMManager BGM;
 
     public Image FadeOut_Img;
 
@@ -15,10 +16,13 @@ public class GameManager : MonoBehaviour
     public GameObject Player2;
 
     public float time = 0;
-
+    public static bool inGameCheck = true; //게임창에 들어갔는지 체크
 
     void Awake()
     {
+        BGM = FindObjectOfType<BGMManager>();
+        if (SceneManager.GetActiveScene().name != "Title" && SceneManager.GetActiveScene().name != "Chapter_Select")
+            inGameCheck = true;
         if (SceneManager.GetActiveScene().name == "1-1" && Chap_1_ImgCheck)
             Chap_1_Image.SetActive(false);
         Chap_1_ImgCheck = true;
@@ -30,6 +34,14 @@ public class GameManager : MonoBehaviour
 
         FadeIn();
     }
+
+    private void Start()
+    {
+        BGM_Play();
+
+
+    }
+
     private void Update()
     {
 
@@ -48,6 +60,40 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
+
+
+    void BGM_Play()
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Title":
+            case "Chapter_Select":
+                if (inGameCheck)
+                {
+                    BGM.Play(0);
+                    inGameCheck = false;
+                }
+                break;
+            case "1-1":
+                BGM.Play(1);
+                break;
+            case "2-1":
+                BGM.Play(2);
+                break;
+            case "3-1":
+                BGM.Play(3);
+                break;
+
+        }
+    }
+
+    //IEnumerator BGM_Fade()
+    //{
+    //    BGM.FadeOutMusic();
+    //    yield return new WaitForSeconds(3f);
+    //    BGM.FadeInMusic();
+    //}
     #region Fade In/Out 화면전환효과
     public void FadeOut()
     {
@@ -94,13 +140,4 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    //public void Die()
-    //{
-    //    FadeOut();
-    //    Invoke("SceneReLoad", 1.3f);
-    //}
-    //void SceneReLoad()
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //}
 }

@@ -25,6 +25,7 @@ public class Player_1P : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
 
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -78,7 +79,7 @@ public class Player_1P : MonoBehaviour
 
         if (curShotDelay < maxShotDelay)
             return;
-
+        SoundManager.instance.SoundPlay("Bubble");
         GameObject bullet = bulletManager.MakeBullet("Player");//총알 생성
         bullet.transform.position = Gun_Position.transform.position;//총알 위치 지정
 
@@ -138,6 +139,7 @@ public class Player_1P : MonoBehaviour
             rigid.velocity = Vector2.zero;
             rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             JumpCount--;
+            SoundManager.instance.SoundPlay("Jump");
             anim.SetBool("IsJump", true);
         }
 

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5a90c23a7d82a4546a54525d602c24e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Main: {fileID: 8300000, guid: 494e4139ccf5036499d262d1f5663cfc, type: 3}
+  - Chap_1: {fileID: 8300000, guid: a8de0921387c8ca46bbc810ea3f78f47, type: 3}
+  - Chap2: {instanceID: 0}
+  - Chap3: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

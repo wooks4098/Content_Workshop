@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject Chap_2_Image;
     public GameObject Player2;
 
+    public GameObject Pause;
+
+
+
     public float time = 0;
     public static bool inGameCheck = true; //게임창에 들어갔는지 체크
 
@@ -32,25 +36,30 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
 
-        FadeIn();
+        
     }
 
     private void Start()
     {
         BGM_Play();
-
+        FadeIn();
 
     }
 
     private void Update()
     {
+        Show_Pause();
+        Cutscene();
+    }
 
+    void Cutscene()
+    {
         time += Time.deltaTime;
-        if(SceneManager.GetActiveScene().name == "1-1" && time >=11.3f)
+        if (SceneManager.GetActiveScene().name == "1-1" && time >= 11.3f)
             Chap_1_Image.SetActive(false);
-        if(SceneManager.GetActiveScene().name == "2-1")
+        if (SceneManager.GetActiveScene().name == "2-1")
         {
-            if(time>= 5)
+            if (time >= 5)
                 Chap_2_Image.SetActive(true);
             if (time > 19)
             {
@@ -60,8 +69,6 @@ public class GameManager : MonoBehaviour
 
         }
     }
-
-
 
     void BGM_Play()
     {
@@ -88,12 +95,44 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //IEnumerator BGM_Fade()
-    //{
-    //    BGM.FadeOutMusic();
-    //    yield return new WaitForSeconds(3f);
-    //    BGM.FadeInMusic();
-    //}
+    #region UI
+    void Show_Pause()
+    {
+        if (SceneManager.GetActiveScene().name != "Title" || SceneManager.GetActiveScene().name != "Chapter_Select")
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (Pause.activeSelf)
+                {
+                    Pause.SetActive(false);
+                    Time.timeScale = 1;
+                }
+                else
+                {
+                    Pause.SetActive(true);
+                    Time.timeScale = 0;
+                }
+            }
+        }
+    }
+    public void Play()
+    {
+        Pause.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void RE()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        FadeIn();
+    }
+    public void Chap()
+    {
+        SceneManager.LoadScene("Chapter_Select");
+        Time.timeScale = 1;
+    }
+    #endregion
+
     #region Fade In/Out 화면전환효과
     public void FadeOut()
     {

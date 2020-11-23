@@ -33,13 +33,34 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("1-3");
                 break;
             case "1-3":
+                SceneManager.LoadScene("1-4");
+                break;
+            case "1-4":
+                SceneManager.LoadScene("1-5");
+                break;
+            case "1-5":
+                SceneManager.LoadScene("1-6");
+                break;
+            case "1-6":
+                SceneManager.LoadScene("1-7");
+                break;
+            case "1-7":
+                SceneManager.LoadScene("1-8");
+                break;
+            case "1-8":
+                SceneManager.LoadScene("1-9");
+                break;
+            case "1-9":
+                SceneManager.LoadScene("1-10");
+                break;
+            case "1-10":
                 SceneManager.LoadScene("Chapter_Select");
                 break;
             case "2-1":
                 SceneManager.LoadScene("2-2");
                 break;
 
-        }
+        }//Chapter_Select
     }
 
     bool PlayerCheck()//플레이어 수 체크
@@ -47,7 +68,15 @@ public class Potal : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "1-1":
+            case "1-2":
             case "1-3":
+            case "1-4":
+            case "1-5":
+            case "1-6":
+            case "1-7":
+            case "1-8":
+            case "1-9":
+            case "1-10":
                 return true;
 
         }

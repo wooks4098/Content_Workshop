@@ -17,6 +17,8 @@ public class SoundManager : MonoBehaviour
     public Sound[] Sounds;//사운드클래스(이름과 효과음)
     public string[] Playering_name; //재생중인 사운드
 
+    public float SoundVolum;
+
     private void Awake()
     {
         if (instance != null)
@@ -28,13 +30,32 @@ public class SoundManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
+        SoundVolum = source[0].volume;
 
-        
+
     }
     private void Start()
     {
         Playering_name = new string[source.Length];
     }
+
+    private void Update()
+    {
+        //source[0].volume = SoundVolum;
+        
+    }
+
+    public void ChangeVolum(float volum)
+    {
+        SoundVolum = volum;
+        for (int i = 0; i < source.Length; i++)
+        {
+            source[i].volume = SoundVolum;
+        }
+    }
+
+
+
     public void SoundPlay(string SoundName)
     {
         for (int i = 0; i < Sounds.Length; i++)

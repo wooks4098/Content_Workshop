@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
-    BGMManager BGM;
+    BGMManager BGM;  //배경음 메니저
+    public Slider BGM_Slider; //배경음 조절 슬라이더
+    SoundManager Sound; // 효과음 메니저
+    public Slider Sound_Slider; // 효과음 조절 슬라이더
 
     public Image FadeOut_Img;
-
+    static bool StartCheck = false;
     static bool Chap_1_ImgCheck = false;
     public GameObject Chap_1_Image;
     public GameObject Chap_2_Image;
@@ -25,8 +28,13 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         BGM = FindObjectOfType<BGMManager>();
+        Sound = FindObjectOfType<SoundManager>();
         if (SceneManager.GetActiveScene().name != "Title" && SceneManager.GetActiveScene().name != "Chapter_Select")
+        {
             inGameCheck = true;
+            Sound_Slider.value = Sound.SoundVolum;
+            BGM_Slider.value = BGM.BGMVolum;
+        }
         if (SceneManager.GetActiveScene().name == "1-1" && Chap_1_ImgCheck)
             Chap_1_Image.SetActive(false);
         Chap_1_ImgCheck = true;
@@ -36,7 +44,7 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
 
-        
+
     }
 
     private void Start()
@@ -50,6 +58,8 @@ public class GameManager : MonoBehaviour
     {
         Show_Pause();
         Cutscene();
+        BGM_Volum();
+        Sound_Volum();
     }
 
     void Cutscene()
@@ -69,7 +79,10 @@ public class GameManager : MonoBehaviour
 
         }
     }
-
+    #region 소리
+    /// <summary>
+    /// 배경음
+    /// </summary>
     void BGM_Play()
     {
         switch (SceneManager.GetActiveScene().name)
@@ -94,6 +107,23 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
+    public void BGM_Volum()
+    {
+        BGM.ChangeVolum(BGM_Slider.value);
+    }
+    /// <summary>
+    /// 효과음
+    /// </summary>
+    /// 
+    void Sound_Volum()
+    {
+        Sound.ChangeVolum(Sound_Slider.value);
+    }
+    #endregion
+
+
+
 
     #region UI
     void Show_Pause()

@@ -464,7 +464,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3de49a11fceeb5b409551b67521c7d26, type: 3}
+    m_Font: {fileID: 12800000, guid: 0c4d0bbf13d3c1a4ba9a14b1a4d367f5, type: 3}
     m_FontSize: 52
     m_FontStyle: 1
     m_BestFit: 0
@@ -644,10 +644,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2253f04b2b64f4dbd47f1956bbaeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGM_Slider: {fileID: 0}
+  Sound_Slider: {fileID: 0}
   FadeOut_Img: {fileID: 0}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 0}
   Player2: {fileID: 0}
+  Pause: {fileID: 0}
   time: 0
 --- !u!4 &636896167
 Transform:
@@ -720,7 +723,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3de49a11fceeb5b409551b67521c7d26, type: 3}
+    m_Font: {fileID: 12800000, guid: 0c4d0bbf13d3c1a4ba9a14b1a4d367f5, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -798,7 +801,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3de49a11fceeb5b409551b67521c7d26, type: 3}
+    m_Font: {fileID: 12800000, guid: 0c4d0bbf13d3c1a4ba9a14b1a4d367f5, type: 3}
     m_FontSize: 133
     m_FontStyle: 1
     m_BestFit: 0
@@ -1006,7 +1009,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3de49a11fceeb5b409551b67521c7d26, type: 3}
+    m_Font: {fileID: 12800000, guid: 0c4d0bbf13d3c1a4ba9a14b1a4d367f5, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -1084,7 +1087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3de49a11fceeb5b409551b67521c7d26, type: 3}
+    m_Font: {fileID: 12800000, guid: 0c4d0bbf13d3c1a4ba9a14b1a4d367f5, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0

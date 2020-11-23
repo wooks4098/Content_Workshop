@@ -12,9 +12,6 @@ public class Switch : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-       
-
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

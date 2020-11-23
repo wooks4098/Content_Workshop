@@ -14,24 +14,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter_Select.unity
     guid: 88931254bac3bf7499cf092507cf9e1c
-  - enabled: 0
-    path: Assets/Scenes/Chapter_3.unity
-    guid: 05b77df3e708f15448ddcd6bbfadafcc
-  - enabled: 0
-    path: Assets/Scenes/Chapter_2.unity
-    guid: e384e1f7d85c5844b80c1deba5dec8a5
-  - enabled: 0
-    path: Assets/Scenes/Chapter_1.unity
-    guid: 198cf42cd15d34140a67a53b85be5b3c
   - enabled: 1
     path: Assets/Scenes/1Chap/1-1.unity
     guid: e0de58508d700b141ba2f69c0b9c2a55
   - enabled: 1
     path: Assets/Scenes/1Chap/1-2.unity
-    guid: 1f08c13d7e482af429994b8a22f8265d
+    guid: bf9f0ce76e6a32947a93a3d41d6ae995
   - enabled: 1
     path: Assets/Scenes/1Chap/1-3.unity
-    guid: 3664b49a713dfdc4b81b809c5374da39
+    guid: 9634a3500642a3b408f2665c9caa6973
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-4.unity
+    guid: 46e80229ca0b8154b8c1ab8d0b1a511c
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-5.unity
+    guid: 7d9ca1efbf5b53342979daa215376f6b
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-6.unity
+    guid: 3c01a2055b7080a408e5c5c2aa90656e
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-7.unity
+    guid: af91d554f221a894aba6955897267112
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-8.unity
+    guid: f79bfb34215429341b30fa234038628c
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-9.unity
+    guid: f2f79ec4e29c0ef48b6ab79a722fb65e
+  - enabled: 1
+    path: Assets/Scenes/1Chap/1-10.unity
+    guid: 6c901449fb00e3a46acf6434c6ab8858
   - enabled: 1
     path: Assets/Scenes/2Chap/2-1.unity
     guid: ee3ea9417cdc1234b8fe79f6403188c0

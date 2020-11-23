@@ -447,10 +447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2253f04b2b64f4dbd47f1956bbaeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGM_Slider: {fileID: 0}
+  Sound_Slider: {fileID: 0}
   FadeOut_Img: {fileID: 0}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 0}
   Player2: {fileID: 0}
+  Pause: {fileID: 0}
   time: 0
 --- !u!4 &899313561
 Transform:
@@ -638,13 +641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32156864, g: 0.23529412, b: 0.23529412, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 3884117682838646531, guid: 24db6ba822a5d8348bd830419824ccd6,
+    type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1684,6 +1688,7 @@ MonoBehaviour:
   - name: 
     clip: {fileID: 0}
   Playering_name: []
+  SoundVolum: 1
 --- !u!4 &1149499228
 Transform:
   m_ObjectHideFlags: 0
@@ -1802,7 +1807,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.137
+  m_Volume: 0.663
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1898,6 +1903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a90c23a7d82a4546a54525d602c24e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGMVolum: 1
   Audio:
   - {fileID: 8300000, guid: 494e4139ccf5036499d262d1f5663cfc, type: 3}
   - {fileID: 8300000, guid: a8de0921387c8ca46bbc810ea3f78f47, type: 3}
@@ -2159,7 +2165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: -0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094148793
@@ -2175,15 +2181,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3de49a11fceeb5b409551b67521c7d26, type: 3}
-    m_FontSize: 64
+    m_Font: {fileID: 12800000, guid: 0c4d0bbf13d3c1a4ba9a14b1a4d367f5, type: 3}
+    m_FontSize: 56
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10

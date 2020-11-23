@@ -8,13 +8,14 @@ public class BGMManager : MonoBehaviour
     public static BGMManager instance;
     private AudioSource source;
 
+    public float BGMVolum;
     public AudioClip[] Audio;
    
     private WaitForSeconds watiTime = new WaitForSeconds(0.01f);
 
     private void Awake()
     {
-       
+        
         source = GetComponent<AudioSource>();
         if (instance != null)
         {
@@ -25,9 +26,18 @@ public class BGMManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
-
+        BGMVolum = source.volume;
+    }
+    private void Update()
+    {
+        
     }
 
+    public void ChangeVolum(float volum)
+    {
+        BGMVolum = volum;
+        source.volume = volum;
+    }
 
     public void Play(int MusicTrack)
     {

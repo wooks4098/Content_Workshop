@@ -21,18 +21,28 @@ public class Player_2P : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
+    }
+    private void Start()
+    {
         State = 0;
     }
-
     private void FixedUpdate()
     {
         Move();
         switch(State)
         {
+            case 0:
+                Physics2D.IgnoreLayerCollision(10, 17, false);//꿈의 균열 Blue 레이어 충돌
+                Physics2D.IgnoreLayerCollision(10, 18, false);//꿈의 균열 Red 레이어 충돌
+                break;
             case 1:
                 Physics2D.IgnoreLayerCollision(10, 18);//꿈의 균열 Red 레이어 무시
+                Physics2D.IgnoreLayerCollision(10, 17,false);//꿈의 균열 Blue 레이어 충돌
+                //Physics2D.Layer
                 break;
             case 2:
+                Physics2D.IgnoreLayerCollision(10, 18,false);//꿈의 균열 Red 레이어 충돌
                 Physics2D.IgnoreLayerCollision(10, 17);//꿈의 균열 Blue 레이어 무시
                 break;
         }
@@ -43,6 +53,7 @@ public class Player_2P : MonoBehaviour
 
     void Move()
     {
+        anim.SetInteger("State", State);
         if (rigid.velocity.y == 0 && rigid.velocity.x == 0)
         {
             anim.SetBool("IsWalk", false);

@@ -77,7 +77,8 @@ public class Boss : MonoBehaviour
             pos += 6;
             dirVec += ranVec;
             rigid.AddForce(dirVec.normalized * 10, ForceMode2D.Impulse);
-
+            SpriteRenderer render = bullet.GetComponent<SpriteRenderer>();
+            render.color = new Color(1, 1, 1, 1);
         }
         curShotDelay = 0;
     }
@@ -103,7 +104,11 @@ public class Boss : MonoBehaviour
             GameObject bullet = bulletManager.MakeBullet("Boss");//총알 생성
             bullet.transform.position = transform.position + Vector3.up * 1f + Vector3.left * 0.7f;//위치 설정
             Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();//총알 물리 생성
-
+            SpriteRenderer render = bullet.GetComponent<SpriteRenderer>();
+            if (i %2 == 0)
+                render.color = new Color(1, 0, 0, 1);
+            else
+                render.color = new Color(1, 1, 1, 1);
             Vector2 dirVec = new Vector2(Mathf.Cos(Mathf.PI * 2 * i / BulletCount),
                                          Mathf.Sin(Mathf.PI * 2 * i / BulletCount));
 

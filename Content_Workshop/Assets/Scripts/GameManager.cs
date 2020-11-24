@@ -96,12 +96,14 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case "1-1":
+            case "InGame":
                 if (!inGameCheck)
                 {
                     BGM.Play(1);
                     inGameCheck = true;
                 }
                 break;
+   
             case "2-1":
                 if (!inGameCheck)
                 {

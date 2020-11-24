@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Player_1P : MonoBehaviour
 {
-    public static int HP;
-    public int ShowHP;//HP보는용도
+    public Slider HP_Slider;
+    public static float HP;
+    public float MaxHP;
+    public float ShowHP;//HP보는용도
     public float Speed;//이동속도
     public float JumpPower;//점프파워
     public int JumpCount;//점프카운트
+    bool isRight = true;
     public LayerMask PlatFormCheck_Layer;//플랫폼 체크 레이어
     public LayerMask Object_Layer;//오브젝트 레이어
     public GameObject TileCheck; //플랫폼 체크 위치
@@ -34,17 +38,36 @@ public class Player_1P : MonoBehaviour
 
         Player_HpSet();
     }
-
+    private void Update()
+    {
+        Hp_Bar();
+    }
     private void FixedUpdate()
     {
+
         Move();
-        Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
-        Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
+        
+        //Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
+        //Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
         Shoot();
         Reload();
         ShowHP = HP;
     }
-
+    void Hp_Bar()
+    {
+        float hp = HP / MaxHP;
+        Camera m_cam = Camera.main;
+        HP_Slider.value = hp;
+        if (hp == 0)
+            HP_Slider.transform.Find("Fill Area").gameObject.SetActive(false);
+        else
+            HP_Slider.transform.Find("Fill Area").gameObject.SetActive(true);
+        Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2f, gameObject.transform.position.z);
+        if(isRight)
+            HP_Slider.transform.position = m_cam.WorldToScreenPoint(pos + new Vector3(-0.4f,0,0)); 
+        else
+            HP_Slider.transform.position = m_cam.WorldToScreenPoint(pos + new Vector3(0.3f, 0, 0)); //gameObject.transform.position + new Vector3(0,5,0);
+    }
     void Player_HpSet()//초기값 세팅
     {
         switch (SceneManager.GetActiveScene().name)
@@ -52,7 +75,7 @@ public class Player_1P : MonoBehaviour
             case "1-1":
             case "2-1":
             case "3-1":
-                HP = 2;
+                HP = 3;
                 break;
 
         }
@@ -110,12 +133,14 @@ public class Player_1P : MonoBehaviour
         {
             gameObject.transform.position += Vector3.left * Speed * Time.deltaTime;
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            isRight = false;
             anim.SetBool("IsWalk", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.transform.position += Vector3.right * Speed * Time.deltaTime;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            isRight = true;
             anim.SetBool("IsWalk", true);
         }
         if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
@@ -152,7 +177,7 @@ public class Player_1P : MonoBehaviour
     void Damaged(Vector2 TargetPos)
     {
         HP--;
-        if(HP == -1)
+        if(HP == 0)
         {
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
@@ -183,7 +208,7 @@ public class Player_1P : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.instance.FadeOut();
         Invoke("SceneLoad", 1.3f);
-        HP = 2;
+        HP = 3;
     }
 
     void SceneLoad()

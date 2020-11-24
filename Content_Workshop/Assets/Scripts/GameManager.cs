@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         Sound = FindObjectOfType<SoundManager>();
         if (SceneManager.GetActiveScene().name != "Title" && SceneManager.GetActiveScene().name != "Chapter_Select")
         {
-            inGameCheck = true;
+           
             Sound_Slider.value = Sound.SoundVolum;
             BGM_Slider.value = BGM.BGMVolum;
         }
@@ -96,13 +96,25 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case "1-1":
-                BGM.Play(1);
+                if (!inGameCheck)
+                {
+                    BGM.Play(1);
+                    inGameCheck = true;
+                }
                 break;
             case "2-1":
-                BGM.Play(2);
+                if (!inGameCheck)
+                {
+                    BGM.Play(2);
+                    inGameCheck = true;
+                }
                 break;
             case "3-1":
-                BGM.Play(3);
+                if (!inGameCheck)
+                {
+                    BGM.Play(3);
+                    inGameCheck = true;
+                }
                 break;
 
         }

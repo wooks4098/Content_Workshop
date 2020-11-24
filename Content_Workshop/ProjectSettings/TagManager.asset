@@ -12,6 +12,8 @@ TagManager:
   - Door
   - Monster
   - Boss
+  - Foot_Blue
+  - Foot_Red
   layers:
   - Default
   - TransparentFX
@@ -30,8 +32,8 @@ TagManager:
   - Player_Damaged
   - Monster
   - DieMonster
-  - 
-  - 
+  - DreamWall_Blue
+  - DreamWall_Red
   - 
   - 
   - 

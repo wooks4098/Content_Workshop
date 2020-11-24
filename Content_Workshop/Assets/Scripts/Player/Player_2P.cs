@@ -11,7 +11,7 @@ public class Player_2P : MonoBehaviour
     public LayerMask Object_Layer;//오브젝트 레이어
     public GameObject TileCheck; //플랫폼 체크 위치
     float Jump_timecheck = 0;//점프 쿨타임용
-
+    public int State;//곰돌이 상태 꿈의 균열  0기본 1 Red 2blue
 
     Rigidbody2D rigid;//물리
     Animator anim;//애니메이션
@@ -21,12 +21,21 @@ public class Player_2P : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        State = 0;
     }
 
     private void FixedUpdate()
     {
         Move();
+        switch(State)
+        {
+            case 1:
+                Physics2D.IgnoreLayerCollision(10, 18);//꿈의 균열 Red 레이어 무시
+                break;
+            case 2:
+                Physics2D.IgnoreLayerCollision(10, 17);//꿈의 균열 Blue 레이어 무시
+                break;
+        }
         //Physics2D.IgnoreLayerCollision(10,9);//1P레이어 무시
         //Physics2D.IgnoreLayerCollision(10,11);//꿈의 균열레이어 무시
         //Physics2D.IgnoreLayerCollision(10,8);//타일 레이어 무시
@@ -80,10 +89,15 @@ public class Player_2P : MonoBehaviour
         }
         Debug.DrawRay(TileCheck.transform.position, Vector2.down * 0.15f, Color.red);//레이케스트 보여주는 코드
 
+    }
 
 
-
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Foot_Blue")
+            State = 2;
+        if (collision.gameObject.tag == "Foot_Red")
+            State = 1;
     }
 
 }

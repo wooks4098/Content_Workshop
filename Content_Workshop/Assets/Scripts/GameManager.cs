@@ -17,10 +17,17 @@ public class GameManager : MonoBehaviour
     public GameObject Chap_1_Image;
     public GameObject Chap_2_Image;
     public GameObject Player2;
-
     public GameObject Pause;
 
+    public static bool Chap1_Check = false;
+    public static bool Chap2_Check = false;
+    public static bool Chap3_Check = false;
+    public Button Chap1_Button;
+    public Button Chap2_Button;
+    public Button Chap3_Button;
 
+
+    public Sprite[] Chap_sprite;
 
     public float time = 0;
     public static bool inGameCheck = true; //게임창에 들어갔는지 체크
@@ -56,12 +63,63 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Chap_ButtonSprite();
         Show_Pause();
         Cutscene();
         BGM_Volum();
         Sound_Volum();
     }
+    void Chap_ButtonSprite()//챕터 선택 버튼 스프라이트 변경
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "1-1":
+                Chap1_Check = true;
+                Chap2_Check = true;
+                break;
+            case "2-1":
+                Chap3_Check = true;
+                break;
+            case "3-1":
+            case "InGame":
 
+                break;
+        }
+        if (SceneManager.GetActiveScene().name != "Chapter_Select")
+            return;
+
+        if (Chap1_Check)
+            Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[1];
+        else
+            Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[0];
+           
+        if (Chap2_Check)
+        {
+            Chap2_Button.interactable = true;
+
+            Chap2_Button.GetComponent<Image>().sprite = Chap_sprite[3];
+        }
+        else
+        {
+            Chap2_Button.interactable = false;
+
+            Chap2_Button.GetComponent<Image>().sprite = Chap_sprite[2];
+        }
+
+        if (Chap3_Check)
+        {
+            Chap3_Button.interactable = true;
+
+            Chap3_Button.GetComponent<Image>().sprite = Chap_sprite[5];
+        }
+        else
+        {
+            Chap3_Button.interactable = false;
+
+            Chap3_Button.GetComponent<Image>().sprite = Chap_sprite[4];
+        }
+
+    }
     void Cutscene()
     {
         time += Time.deltaTime;

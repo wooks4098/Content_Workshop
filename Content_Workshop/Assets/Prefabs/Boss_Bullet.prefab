@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4571074515876480405}
   m_Layer: 0
   m_Name: Boss_Bullet
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,9 +98,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024931908, y: 0}
+  m_Offset: {x: -0.0043451786, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2912922
+  m_Radius: 0.22953153
 --- !u!50 &9187647293029405731
 Rigidbody2D:
   serializedVersion: 4

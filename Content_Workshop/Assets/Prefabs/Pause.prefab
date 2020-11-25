@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 6212727239513519154}
   - component: {fileID: 6212727239513519153}
   m_Layer: 5
-  m_Name: Go
+  m_Name: Go_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,7 +609,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2aa06028a33350249823c720950b13e3, type: 3}
+  m_Sprite: {fileID: 8382955819942888327, guid: e32b38d47f6e8904ab253b1df53eb630,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1169,7 +1170,7 @@ GameObject:
   - component: {fileID: 6212727240750101682}
   - component: {fileID: 6212727240750101681}
   m_Layer: 5
-  m_Name: Chap
+  m_Name: Chap_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,7 +1299,7 @@ GameObject:
   - component: {fileID: 6212727241307245426}
   - component: {fileID: 6212727241307245425}
   m_Layer: 5
-  m_Name: Re
+  m_Name: Re_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1350,7 +1351,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 81b4d8bff37fe9c45b91a86d03d347fc, type: 3}
+  m_Sprite: {fileID: 1531952116268730578, guid: e32b38d47f6e8904ab253b1df53eb630,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

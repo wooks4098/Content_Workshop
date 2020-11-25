@@ -123,8 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa67c598e9e19a41892cfa9d83c34ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP_Bar: {fileID: 3506887466433718961}
-  camvas: {fileID: 6592093811891214953}
   HP_Slider: {fileID: 963833195068127800}
   MaxHP: 3
   ShowHP: 0
@@ -353,7 +351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7850360274529124008, guid: e676a017ee28bf0439a8c643f42e4bee,
+  m_Sprite: {fileID: -1004216933540077918, guid: e32b38d47f6e8904ab253b1df53eb630,
     type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -552,8 +550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -0.03699875, y: 0.059999943}
+  m_SizeDelta: {x: 3.6410522, y: -6.3828654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &638418452455514718
 CanvasRenderer:
@@ -582,9 +580,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2537874934579434568, guid: e676a017ee28bf0439a8c643f42e4bee,
+  m_Sprite: {fileID: -1800073210203994359, guid: e32b38d47f6e8904ab253b1df53eb630,
     type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

@@ -14,6 +14,8 @@ TagManager:
   - Boss
   - Foot_Blue
   - Foot_Red
+  - Cloud_Box
+  - Bird_Box
   layers:
   - Default
   - TransparentFX

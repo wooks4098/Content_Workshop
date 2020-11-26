@@ -59,6 +59,33 @@ public class Potal : MonoBehaviour
             case "2-1":
                 SceneManager.LoadScene("2-2");
                 break;
+            case "2-2":
+                SceneManager.LoadScene("2-3");
+                break;
+            case "2-3":
+                SceneManager.LoadScene("2-4");
+                break;
+            case "2-4":
+                SceneManager.LoadScene("2-5");
+                break;
+            case "2-5":
+                SceneManager.LoadScene("2-6");
+                break;
+            case "2-6":
+                SceneManager.LoadScene("2-7");
+                break;
+            case "2-7":
+                SceneManager.LoadScene("2-8");
+                break;
+            case "2-8":
+                SceneManager.LoadScene("2-9");
+                break;
+            case "2-9":
+                SceneManager.LoadScene("2-10");
+                break;
+            case "2-10":
+                SceneManager.LoadScene("Chapter_Select");
+                break;
 
         }//Chapter_Select
     }

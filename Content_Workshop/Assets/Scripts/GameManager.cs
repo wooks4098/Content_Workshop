@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     static bool Chap_1_ImgCheck = false;
     public GameObject Chap_1_Image;
     public GameObject Chap_2_Image;
+    public GameObject Player1;
     public GameObject Player2;
     public GameObject Pause;
 
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     public Button Chap2_Button;
     public Button Chap3_Button;
 
+    public GameObject How;
 
     public Sprite[] Chap_sprite;
 
@@ -42,9 +44,9 @@ public class GameManager : MonoBehaviour
             Sound_Slider.value = Sound.SoundVolum;
             BGM_Slider.value = BGM.BGMVolum;
         }
-        if (SceneManager.GetActiveScene().name == "1-1" && Chap_1_ImgCheck)
-            Chap_1_Image.SetActive(false);
-        Chap_1_ImgCheck = true;
+        //if (SceneManager.GetActiveScene().name == "1-1" && Chap_1_ImgCheck)
+        //    Chap_1_Image.SetActive(false);
+        //Chap_1_ImgCheck = true;
         if (instance != null)
         {
             return;
@@ -63,12 +65,59 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Close_HowtoPlay();
         Chap_ButtonSprite();
         Show_Pause();
         Cutscene();
         BGM_Volum();
         Sound_Volum();
     }
+
+
+    public void Show_Howtoplay()
+    {
+        How.SetActive(true);
+    }
+
+    void Close_HowtoPlay()
+    {
+        if (SceneManager.GetActiveScene().name != "Title")
+            return;
+        if(Input.GetKey(KeyCode.Escape))
+            How.SetActive(false);
+    }
+    void Cutscene()
+    {
+        time += Time.deltaTime;
+        if (SceneManager.GetActiveScene().name == "1-1" && time >= 11.3f)
+        {
+            Player1.SetActive(true);
+            Chap_1_Image.SetActive(false);
+
+        }
+        if (SceneManager.GetActiveScene().name == "2-1")
+        {
+            if (time >= 5)
+            {
+                Player1.SetActive(false);
+                Chap_2_Image.SetActive(true);
+
+            }
+            if (time > 18.5f)
+            {
+                Player1.SetActive(true);
+            }
+            if (time > 19)
+            {
+                Player2.SetActive(true);
+
+                Chap_2_Image.SetActive(false);
+            }
+
+        }
+    }
+
+    #region 챕터선택 UI
     void Chap_ButtonSprite()//챕터 선택 버튼 스프라이트 변경
     {
         switch (SceneManager.GetActiveScene().name)
@@ -92,7 +141,7 @@ public class GameManager : MonoBehaviour
             Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[1];
         else
             Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[0];
-           
+
         if (Chap2_Check)
         {
             Chap2_Button.interactable = true;
@@ -120,23 +169,8 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    void Cutscene()
-    {
-        time += Time.deltaTime;
-        if (SceneManager.GetActiveScene().name == "1-1" && time >= 11.3f)
-            Chap_1_Image.SetActive(false);
-        if (SceneManager.GetActiveScene().name == "2-1")
-        {
-            if (time >= 5)
-                Chap_2_Image.SetActive(true);
-            if (time > 19)
-            {
-                Player2.SetActive(true);
-                Chap_2_Image.SetActive(false);
-            }
+    #endregion
 
-        }
-    }
     #region 소리
     /// <summary>
     /// 배경음
@@ -193,9 +227,6 @@ public class GameManager : MonoBehaviour
         Sound.ChangeVolum(Sound_Slider.value);
     }
     #endregion
-
-
-
 
     #region UI
     void Show_Pause()

@@ -79,12 +79,16 @@ public class GameManager : MonoBehaviour
         How.SetActive(true);
     }
 
-    void Close_HowtoPlay()
+    public void Close_HowtoPlay()
     {
         if (SceneManager.GetActiveScene().name != "Title")
             return;
         if(Input.GetKey(KeyCode.Escape))
             How.SetActive(false);
+    }
+    public void Close_HowtoPlay_Button()
+    {
+         How.SetActive(false);
     }
     void Cutscene()
     {
@@ -106,12 +110,13 @@ public class GameManager : MonoBehaviour
             if (time > 18.5f)
             {
                 Player1.SetActive(true);
+                Chap_2_Image.SetActive(false);
             }
             if (time > 19)
             {
                 Player2.SetActive(true);
 
-                Chap_2_Image.SetActive(false);
+                
             }
 
         }

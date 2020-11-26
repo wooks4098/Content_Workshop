@@ -2844,11 +2844,13 @@ MonoBehaviour:
   FadeOut_Img: {fileID: 1278604810}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 0}
+  Player1: {fileID: 0}
   Player2: {fileID: 0}
   Pause: {fileID: 876220327}
   Chap1_Button: {fileID: 0}
   Chap2_Button: {fileID: 0}
   Chap3_Button: {fileID: 0}
+  How: {fileID: 0}
   Chap_sprite: []
   time: 0
 --- !u!4 &1903445816
@@ -3258,12 +3260,12 @@ PrefabInstance:
     - target: {fileID: 6422955377465815256, guid: 679d509d103948e449389ef8370ad2bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.54
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 6422955377465815256, guid: 679d509d103948e449389ef8370ad2bf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.65
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 6422955377465815256, guid: 679d509d103948e449389ef8370ad2bf,
         type: 3}

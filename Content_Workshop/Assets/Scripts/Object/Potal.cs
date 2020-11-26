@@ -33,7 +33,7 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("1-3");
                 break;
             case "1-3":
-                SceneManager.LoadScene("1-4");
+                SceneManager.LoadScene("Chapter_Select");
                 break;
             case "1-4":
                 SceneManager.LoadScene("1-5");

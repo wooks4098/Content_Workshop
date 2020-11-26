@@ -38,12 +38,10 @@ public class Player_1P : MonoBehaviour
 
         Player_HpSet();
     }
-    private void Update()
-    {
-        Hp_Bar();
-    }
+
     private void FixedUpdate()
     {
+        Hp_Bar();
 
         Move();
         

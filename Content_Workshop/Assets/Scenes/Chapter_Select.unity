@@ -646,11 +646,13 @@ MonoBehaviour:
   FadeOut_Img: {fileID: 0}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 0}
+  Player1: {fileID: 0}
   Player2: {fileID: 0}
   Pause: {fileID: 0}
   Chap1_Button: {fileID: 2051798019}
   Chap2_Button: {fileID: 2132852895}
   Chap3_Button: {fileID: 456264402}
+  How: {fileID: 0}
   Chap_sprite:
   - {fileID: -1842005973062801527, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
   - {fileID: 2598369951218865402, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}

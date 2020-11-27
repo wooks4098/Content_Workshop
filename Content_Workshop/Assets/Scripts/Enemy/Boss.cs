@@ -32,6 +32,7 @@ public class Boss : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D Boss_rigid;//물리
+    Animator anim;//애니메이션
 
 
     private void Awake()
@@ -39,6 +40,7 @@ public class Boss : MonoBehaviour
         MaxHp = HP;
         spriteRenderer = GetComponent<SpriteRenderer>();
         Boss_rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         Boss_Phase = (int)Boss_State.None;
         Phase_Curtime = 0;
     }
@@ -76,12 +78,12 @@ public class Boss : MonoBehaviour
     {
 
         Moveto_phaseto1();//이동
+        anim.Play("Boss_2");
 
         if (!MoveCheck)
             return;
         if (curShotDelay < maxShotDelay) 
             return;
-
         int pos = -6;
         for (int i = 0; i < 3; i++)
         {
@@ -105,6 +107,7 @@ public class Boss : MonoBehaviour
     void Phase_2_Fling()// 패턴 2
     {
         Moveto_phaseto2();//이동
+        anim.Play("Boss_3");
 
         if (!MoveCheck)
             return;
@@ -117,6 +120,7 @@ public class Boss : MonoBehaviour
 
         if (curShotDelay < maxShotDelay)
             return;
+
         int BulletCount = 20;
         for(int i = 0; i< BulletCount; i++)
         {

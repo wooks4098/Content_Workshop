@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 18445838615d0584984d0b71bc90625f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3958418010203063414
+    second: Boss_monster_0
+  - first:
+      213: -5260832663995625575
+    second: Boss_monster_1
+  - first:
+      213: -3165063995316218572
+    second: Boss_monster_2
+  - first:
+      213: -899546857308761070
+    second: Boss_monster_3
+  - first:
+      213: 5721908590418888139
+    second: Boss_monster_4
+  - first:
+      213: 7127222875562655694
+    second: Boss_monster_5
+  - first:
+      213: -264399233724450262
+    second: Boss_monster_6
+  - first:
+      213: 4019045428556242780
+    second: Boss_monster_7
+  - first:
+      213: -6743011275224456325
+    second: Boss_monster_8
+  - first:
+      213: -2667262503823446062
+    second: Boss_monster_9
+  - first:
+      213: 3957572368987987763
+    second: Boss_monster_10
+  - first:
+      213: 8724686364489446658
+    second: Boss_monster_11
+  - first:
+      213: -9014302086119311760
+    second: Boss_monster_12
+  - first:
+      213: 8712632218133297850
+    second: Boss_monster_13
+  - first:
+      213: 3961919063432855588
+    second: Boss_monster_14
+  - first:
+      213: 610692477296894196
+    second: Boss_monster_15
+  - first:
+      213: 1789939972507107694
+    second: Boss_monster_16
+  - first:
+      213: 2311997638429543736
+    second: Boss_monster_17
+  - first:
+      213: -1862420073234113768
+    second: Boss_monster_18
+  - first:
+      213: 1438954094930595386
+    second: Boss_monster_19
+  - first:
+      213: -240850853804072253
+    second: Boss_monster_20
+  - first:
+      213: -3560313652904043093
+    second: Boss_monster_21
+  - first:
+      213: -8394612850427136134
+    second: Boss_monster_22
+  - first:
+      213: -4570239161244673344
+    second: Boss_monster_23
+  - first:
+      213: 3362600285861485309
+    second: Boss_monster_24
+  - first:
+      213: 7529023917467488285
+    second: Boss_monster_25
+  - first:
+      213: 6233264175862932390
+    second: Boss_monster_26
+  - first:
+      213: 540439629503234835
+    second: Boss_monster_27
+  - first:
+      213: -1494581157528683076
+    second: Boss_monster_28
+  - first:
+      213: -5882309496434307125
+    second: Boss_monster_29
+  - first:
+      213: -7290114215377200472
+    second: Boss_monster_30
+  - first:
+      213: -807122403443412096
+    second: Boss_monster_31
+  - first:
+      213: -5649243787560369184
+    second: Boss_monster_32
+  - first:
+      213: -1352654789894881823
+    second: Boss_monster_33
+  - first:
+      213: 3473665574993600443
+    second: Boss_monster_34
+  - first:
+      213: -5237238135851426774
+    second: Boss_monster_35
+  - first:
+      213: 2690412446676909862
+    second: Boss_monster_36
+  - first:
+      213: -1439139060959263668
+    second: Boss_monster_37
+  - first:
+      213: -330057113505129824
+    second: Boss_monster_38
+  - first:
+      213: 9086410019191173644
+    second: Boss_monster_39
+  - first:
+      213: 231515210186894388
+    second: Boss_monster_40
+  - first:
+      213: 4202965141038365845
+    second: Boss_monster_41
+  - first:
+      213: -6836777499443654701
+    second: Boss_monster_42
+  - first:
+      213: 2332759335907273571
+    second: Boss_monster_43
+  - first:
+      213: 1597090770901119525
+    second: Boss_monster_44
+  - first:
+      213: -301321111373406200
+    second: Boss_monster_45
+  - first:
+      213: -8906621126839869098
+    second: Boss_monster_46
+  - first:
+      213: -448655479092040984
+    second: Boss_monster_47
+  - first:
+      213: 7218687852317138475
+    second: Boss_monster_48
+  - first:
+      213: 4707205981081083736
+    second: Boss_monster_49
+  - first:
+      213: -2446408847036752798
+    second: Boss_monster_50
+  - first:
+      213: -6012588746677230601
+    second: Boss_monster_51
+  - first:
+      213: 7764263122378425819
+    second: Boss_monster_52
+  - first:
+      213: -2101923364070223782
+    second: Boss_monster_53
+  - first:
+      213: 2059557411808307367
+    second: Boss_monster_54
+  - first:
+      213: -4695465152763671357
+    second: Boss_monster_55
+  - first:
+      213: -1975688254596331134
+    second: Boss_monster_56
+  - first:
+      213: -7279828891978059522
+    second: Boss_monster_57
+  - first:
+      213: 1042306797040185570
+    second: Boss_monster_58
+  - first:
+      213: 7139304140965577470
+    second: Boss_monster_59
+  - first:
+      213: -8639776920488087093
+    second: Boss_monster_60
+  - first:
+      213: -5481975119524936602
+    second: Boss_monster_61
+  - first:
+      213: -5601329269425197909
+    second: Boss_monster_62
+  - first:
+      213: -6623331807027646083
+    second: Boss_monster_63
+  - first:
+      213: 8865689416499881855
+    second: Boss_monster_64
+  - first:
+      213: -7960788874336602125
+    second: Boss_monster_65
+  - first:
+      213: 8743227863737177931
+    second: Boss_monster_66
+  - first:
+      213: 1386095685170044376
+    second: Boss_monster_67
+  - first:
+      213: -371202805934992203
+    second: Boss_monster_68
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_monster_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1019
+        width: 436
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4355cc3c01f6314d0800000000000000
+      internalID: -3165063995316218572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_5
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 996
+        width: 436
+        height: 413
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf33f4917bf8e260800000000000000
+      internalID: 7127222875562655694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_7
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 974
+        width: 462
+        height: 449
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f9041068486c730800000000000000
+      internalID: 4019045428556242780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_12
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 1003
+        width: 437
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076bbc23304c6e280800000000000000
+      internalID: -9014302086119311760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_24
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 543
+        width: 437
+        height: 394
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa9668e42b5aae20800000000000000
+      internalID: 3362600285861485309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_27
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 519
+        width: 437
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313851bcaf6008700800000000000000
+      internalID: 540439629503234835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_30
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 496
+        width: 461
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa9a6ceebf44da90800000000000000
+      internalID: -7290114215377200472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_34
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 524
+        width: 437
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf1ff9af60f43030800000000000000
+      internalID: 3473665574993600443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_48
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 84
+        width: 436
+        height: 392
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e5acdfa5eed2460800000000000000
+      internalID: 7218687852317138475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_51
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 59
+        width: 435
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3eac5146efe8ca0800000000000000
+      internalID: -6012588746677230601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_53
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 22
+        width: 461
+        height: 450
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50108b36d774d2e0800000000000000
+      internalID: -2101923364070223782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_monster_56
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 44
+        width: 436
+        height: 414
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289cfd50002f494e0800000000000000
+      internalID: -1975688254596331134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

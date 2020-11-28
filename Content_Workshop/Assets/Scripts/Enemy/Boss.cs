@@ -223,7 +223,7 @@ public class Boss : MonoBehaviour
 
     }
 
-    void Damage()
+    public void Damage()
     {
         HP--;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);

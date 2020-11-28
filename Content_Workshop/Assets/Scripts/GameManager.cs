@@ -101,23 +101,25 @@ public class GameManager : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "2-1")
         {
-            if (time >= 5)
+            if (time > 19)
+            {
+                Player2.SetActive(true);
+                Player1.SetActive(true);
+                Chap_2_Image.SetActive(false);
+
+            }
+            else if (time > 18.5f)
+            {
+                Player1.SetActive(true);
+            }
+            else if(time >= 5)
             {
                 Player1.SetActive(false);
                 Chap_2_Image.SetActive(true);
 
             }
-            if (time > 18.5f)
-            {
-                Player1.SetActive(true);
-                Chap_2_Image.SetActive(false);
-            }
-            if (time > 19)
-            {
-                Player2.SetActive(true);
-
-                
-            }
+            
+           
 
         }
     }
@@ -132,6 +134,7 @@ public class GameManager : MonoBehaviour
                 Chap2_Check = true;
                 break;
             case "2-1":
+            case "2-2":
                 Chap3_Check = true;
                 break;
             case "3-1":

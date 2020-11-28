@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class Player_1P : MonoBehaviour
 {
     public Slider HP_Slider;
@@ -41,19 +42,22 @@ public class Player_1P : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         Hp_Bar();
 
-        Move();
         
         //Physics2D.IgnoreLayerCollision(9, 10);//2P레이어 무시
         //Physics2D.IgnoreLayerCollision(9, 12);//2P타일 레이어 무시
         Shoot();
         Reload();
-        ShowHP = HP;
+
+        Move();
     }
+
     void Hp_Bar()
     {
         float hp = HP / MaxHP;
+        ShowHP = HP;
         Camera m_cam = Camera.main;
         HP_Slider.value = hp;
         if (hp == 0)
@@ -153,8 +157,6 @@ public class Player_1P : MonoBehaviour
                 JumpCount = 1;
                 anim.SetBool("IsJump", false);
             }
-
-           
         }
             //isJump = Physics2D.Raycast(TileCheck.transform.position, Vector3.down, 0.15f, PlatFormCheck_Layer);
         if (Input.GetKey(KeyCode.Space) && JumpCount >= 1)

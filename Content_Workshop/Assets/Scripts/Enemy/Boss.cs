@@ -27,6 +27,10 @@ public class Boss : MonoBehaviour
 
     public Transform Flying_Pos;//패턴 2 위치
     public Transform Standing_Pos;//패턴 1 위치
+    public Transform Die_Pos;
+
+    public float DietimeCheck = 0;
+    public bool DieMoveCheck = false;
 
     public Sprite[] sp;
 
@@ -50,11 +54,11 @@ public class Boss : MonoBehaviour
 
 
         Hp_Bar.value = HP / MaxHp;
-        if (HP == 0)
+        if (HP <= 0)
         {
             Hp_Slider.SetActive(false);
             //죽는 모션
-
+            Die();
             return;
         }
 
@@ -71,6 +75,24 @@ public class Boss : MonoBehaviour
             case (int)Boss_State.Flying:
                 Phase_2_Fling();
                 break;
+        }
+    }
+
+    void Die()
+    {
+        DietimeCheck += Time.deltaTime;
+        if(DietimeCheck > 3f)
+        {
+            if(!DieMoveCheck)
+                gameObject.transform.position = Die_Pos.position;
+
+            DieMoveCheck = true;
+            spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+            gameObject.transform.position += Vector3.up * 3f * Time.deltaTime;
+        }
+        else if(DietimeCheck > 0f)
+        {
+            spriteRenderer.color = new Color(0, 0, 0, 0);
         }
     }
 

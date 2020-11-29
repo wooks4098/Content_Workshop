@@ -29,6 +29,7 @@ public class Boss : MonoBehaviour
     public Transform Standing_Pos;//패턴 1 위치
     public Transform Die_Pos;
 
+    public GameObject Die_gam;
     public float DietimeCheck = 0;
     public bool DieMoveCheck = false;
 
@@ -89,6 +90,8 @@ public class Boss : MonoBehaviour
             DieMoveCheck = true;
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             gameObject.transform.position += Vector3.up * 3f * Time.deltaTime;
+            Die_gam.SetActive(true);
+            Die_gam.transform.position = Die_Pos.position;
         }
         else if(DietimeCheck > 0f)
         {

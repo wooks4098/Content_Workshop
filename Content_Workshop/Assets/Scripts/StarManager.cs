@@ -28,6 +28,7 @@ public class StarManager : MonoBehaviour
                 if (Star[rand].activeSelf == false)
                 {
                     Star[rand].SetActive(true);
+                    Star[rand].GetComponent<Star>().time = 0f;
                     break;
                 }
             }

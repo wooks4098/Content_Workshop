@@ -5,12 +5,18 @@ using UnityEngine;
 public class Star : MonoBehaviour
 {
     Boss boss;
-
+    public float time = 0;
+    public float dissappeartime = 2f;
     private void Awake()
     {
         boss = FindObjectOfType<Boss>();
     }
-
+    private void Update()
+    {
+        time += Time.deltaTime;
+        if (time >= dissappeartime)
+            gameObject.SetActive(false);
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player2")

@@ -137,7 +137,7 @@ public class Player_2P : MonoBehaviour
                 anim.SetBool("IsJump", true);
             else
                 anim.SetBool("Is2Jump", true);
-            SoundManager.instance.SoundPlay("Jump");
+            SoundManager.instance.SoundPlay("2P_Jump");
             rigid.velocity = Vector2.zero;
             rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             JumpCount--;
@@ -209,7 +209,10 @@ public class Player_2P : MonoBehaviour
     {
         if (collision.gameObject.tag == "Monster")
             Damaged(collision.transform.position);
-
+        if (collision.gameObject.tag == "Foot_Blue")
+            State = 2;
+        if (collision.gameObject.tag == "Foot_Red")
+            State = 1;
     }
 
 }

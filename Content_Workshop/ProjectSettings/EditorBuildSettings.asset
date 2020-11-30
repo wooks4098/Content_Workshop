@@ -52,31 +52,58 @@ EditorBuildSettings:
     guid: 065787f371350ab47b2a8f05ee55f4f7
   - enabled: 1
     path: Assets/Scenes/2Chap/2-3.unity
-    guid: bbf036b6f2e17db4f94816c3c6730847
-  - enabled: 1
-    path: Assets/Scenes/2Chap/2-4.unity
-    guid: 401105e27e85c8b43bed8e72673096a4
+    guid: 72b067027f80d534487f856246186f14
   - enabled: 1
     path: Assets/Scenes/2Chap/2-5.unity
-    guid: 3f547332a1433a3439d0fe377bb5d14f
+    guid: 19430d6f06a24a840a55347cf0377d08
+  - enabled: 1
+    path: Assets/Scenes/2Chap/2-4.unity
+    guid: 153e48ebe0dbcb04da5b01d7b9086d36
   - enabled: 1
     path: Assets/Scenes/2Chap/2-6.unity
-    guid: 2c3921260e32bb042a744184166b9ffb
+    guid: beeda79489e492c4191ab4c5fdf3b3dc
   - enabled: 1
     path: Assets/Scenes/2Chap/2-7.unity
-    guid: ffa02e208115bcb479ed11209ff905e7
+    guid: 4a9dbe0136930d142b404d698eb9f991
   - enabled: 1
     path: Assets/Scenes/2Chap/2-8.unity
-    guid: c9480b9033a2a824e8c158f947b70505
+    guid: 317dd9b1e51efa240b3f05d8746b97b5
   - enabled: 1
     path: Assets/Scenes/2Chap/2-9.unity
-    guid: 59dd0fd8c67c3644c868edaf438655ea
+    guid: 988f43eb4a415bd49b8a8c20f022c779
   - enabled: 1
     path: Assets/Scenes/2Chap/2-10.unity
-    guid: 569209a1662a01e45b853b4cb4cfb599
+    guid: b3276e0cadf69044e952165367aded57
   - enabled: 1
-    path: Assets/Scenes/2Chap/2-1.unity
-    guid: 9a6c44a341ece4640a10e214a95d1baf
+    path: Assets/Scenes/3Chap/3-1.unity
+    guid: c369676617d68e149a8224dd2a5502bc
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

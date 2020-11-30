@@ -89,6 +89,7 @@ public class Monster : MonoBehaviour
         if(HP <= 0)
         {
             rigid.gravityScale = 5;
+            gameObject.SetActive(false);
         }
         else
             spriteRenderer.color = new Color(1, 1, 1, 1f);

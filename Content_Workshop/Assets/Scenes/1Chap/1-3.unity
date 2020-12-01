@@ -1858,6 +1858,7 @@ MonoBehaviour:
   FadeOut_Img: {fileID: 527780579}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 0}
+  Chap_3_Image: {fileID: 0}
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   Pause: {fileID: 994010624}
@@ -1866,6 +1867,7 @@ MonoBehaviour:
   Chap3_Button: {fileID: 0}
   How: {fileID: 0}
   Chap_sprite: []
+  Chap3time: 0
   time: 0
 --- !u!4 &1616746444
 Transform:
@@ -3478,6 +3480,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 362393528957095499, guid: 7140cca8385560448bc0502da9db0da6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 362393528957095499, guid: 7140cca8385560448bc0502da9db0da6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 362393529918462060, guid: 7140cca8385560448bc0502da9db0da6,
         type: 3}
       propertyPath: m_LocalPosition.x

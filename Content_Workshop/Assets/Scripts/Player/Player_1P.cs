@@ -105,7 +105,7 @@ public class Player_1P : MonoBehaviour
 
     void Shoot()
     {
-        if (!Input.GetKey(KeyCode.U) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.V))
+        if (!Input.GetKey(KeyCode.Y))
             return;
 
         if (curShotDelay < maxShotDelay)

@@ -355,6 +355,7 @@ MonoBehaviour:
   FadeOut_Img: {fileID: 571771561}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 1721888064}
+  Chap_3_Image: {fileID: 0}
   Player1: {fileID: 1067525997}
   Player2: {fileID: 57892348}
   Pause: {fileID: 339081641}
@@ -363,6 +364,7 @@ MonoBehaviour:
   Chap3_Button: {fileID: 0}
   How: {fileID: 0}
   Chap_sprite: []
+  Chap3time: 0
   time: 0
 --- !u!4 &225903525
 Transform:

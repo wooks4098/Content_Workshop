@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -537009053568656936, guid: ced5ed2a3dd9a3a4c8d906580789b049,
+  m_Sprite: {fileID: -487602073035620737, guid: 39f8e5087aff13a48bb0b79369b09007,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 456264403}
   m_OnClick:
     m_PersistentCalls:
@@ -571,7 +571,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: InGame
+          m_StringArgument: 3-1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 636896166}
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3178653592238291879, guid: ced5ed2a3dd9a3a4c8d906580789b049,
+  m_Sprite: {fileID: -8089233972223790796, guid: a007de3bdeda7cc4692e71629be14e42,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -657,6 +657,7 @@ MonoBehaviour:
   FadeOut_Img: {fileID: 0}
   Chap_1_Image: {fileID: 0}
   Chap_2_Image: {fileID: 0}
+  Chap_3_Image: {fileID: 0}
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   Pause: {fileID: 0}
@@ -665,12 +666,13 @@ MonoBehaviour:
   Chap3_Button: {fileID: 456264402}
   How: {fileID: 0}
   Chap_sprite:
-  - {fileID: -1842005973062801527, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
-  - {fileID: 2598369951218865402, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
-  - {fileID: -1842005973062801527, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
-  - {fileID: 2598369951218865402, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
-  - {fileID: -3178653592238291879, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
-  - {fileID: 2598369951218865402, guid: ced5ed2a3dd9a3a4c8d906580789b049, type: 3}
+  - {fileID: -8547121021627555037, guid: a007de3bdeda7cc4692e71629be14e42, type: 3}
+  - {fileID: -732304371105431094, guid: 39f8e5087aff13a48bb0b79369b09007, type: 3}
+  - {fileID: -8293584019738864130, guid: a007de3bdeda7cc4692e71629be14e42, type: 3}
+  - {fileID: 6613591532428844368, guid: 39f8e5087aff13a48bb0b79369b09007, type: 3}
+  - {fileID: -8089233972223790796, guid: a007de3bdeda7cc4692e71629be14e42, type: 3}
+  - {fileID: -7441144882921918234, guid: 39f8e5087aff13a48bb0b79369b09007, type: 3}
+  Chap3time: 0
   time: 0
 --- !u!4 &636896167
 Transform:
@@ -808,7 +810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7455466129045644145, guid: ced5ed2a3dd9a3a4c8d906580789b049,
+  m_Sprite: {fileID: -1545307067450107672, guid: 39f8e5087aff13a48bb0b79369b09007,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -949,7 +951,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1842005973062801527, guid: ced5ed2a3dd9a3a4c8d906580789b049,
+  m_Sprite: {fileID: -8547121021627555037, guid: a007de3bdeda7cc4692e71629be14e42,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1044,7 +1046,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2132852896}
   m_OnClick:
     m_PersistentCalls:
@@ -1090,7 +1092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1842005973062801527, guid: ced5ed2a3dd9a3a4c8d906580789b049,
+  m_Sprite: {fileID: -8293584019738864130, guid: a007de3bdeda7cc4692e71629be14e42,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

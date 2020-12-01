@@ -35,6 +35,8 @@ public class Boss : MonoBehaviour
     bool Die_Sound = false;
     public Sprite[] sp; // 총알 모양
 
+    bool endCheck = false;
+
     SpriteRenderer spriteRenderer;
     Rigidbody2D Boss_rigid;//물리
     Animator anim;//애니메이션
@@ -259,7 +261,11 @@ public class Boss : MonoBehaviour
             Die_ChangeSprite();
             if (DietimeCheck <= 9f)
                 return;
-            GameManager.instance.Chap3_CutScene();
+            if(!endCheck)
+            {
+                GameManager.instance.Chap3_CutScene();
+                endCheck = true;
+            }
         }
         else if (DietimeCheck > 0f)
         {

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     static bool Chap_1_ImgCheck = false;
     public GameObject Chap_1_Image;
     public GameObject Chap_2_Image;
+    public GameObject Chap_3_Image;
     public GameObject Player1;
     public GameObject Player2;
     public GameObject Pause;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] Chap_sprite;
 
+    public float Chap3time = 0;
     public float time = 0;
     public static bool inGameCheck = true; //게임창에 들어갔는지 체크
     public static bool ClearCheck = false;
@@ -72,6 +74,17 @@ public class GameManager : MonoBehaviour
         Cutscene();
         BGM_Volum();
         Sound_Volum();
+
+
+        if (ClearCheck)
+        {
+            Chap3time += Time.deltaTime;
+            if (Chap3time >= 24f)
+            {
+                SceneManager.LoadScene("text");
+            }
+        }
+
     }
 
     #region 컷신
@@ -114,9 +127,11 @@ public class GameManager : MonoBehaviour
     {
         Player2.SetActive(false);
         Player1.SetActive(false);
+        Chap_3_Image.SetActive(true);
         ClearCheck = true;
-        //BGM.Play(5);
-        //컷신 보여주는 코드추가
+        BGM.Play(5);
+        inGameCheck = false;
+
     }
 
     #endregion
@@ -125,21 +140,20 @@ public class GameManager : MonoBehaviour
     #region 챕터선택 UI
     void Chap_ButtonSprite()//챕터 선택 버튼 스프라이트 변경
     {
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "1-3":
-                Chap1_Check = true;
+        //switch (SceneManager.GetActiveScene().name)
+        //{
+        //    case "1-3":
+        //        Chap1_Check = true;
 
-                break;
-            case "2-1":
-            case "2-5":
-                Chap2_Check = true;
-                break;
-            case "Boss":
-            case "Title":
-                Chap3_Check = true;
-                break;
-        }
+        //        break;
+        //    case "2-1":
+        //    case "2-5":
+        //        Chap2_Check = true;
+        //        break;
+        //    case "Boss":
+        //        Chap3_Check = true;
+        //        break;
+        //}
         if (SceneManager.GetActiveScene().name != "Chapter_Select")
             return;
 
@@ -167,7 +181,6 @@ public class GameManager : MonoBehaviour
 
         if (Chap3_Check)
         {
-            Chap3_Button.interactable = true;
             Chap3_Button.GetComponent<Image>().sprite = Chap_sprite[5];
         }
         else
@@ -251,8 +264,12 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Title")
             return;
-        if (Input.GetKey(KeyCode.Escape))
+        if (How.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
+        {
+            SoundManager.instance.SoundPlay("UI");
             How.SetActive(false);
+
+        }
     }
     public void Close_HowtoPlay_Button()
     {
@@ -267,10 +284,13 @@ public class GameManager : MonoBehaviour
                 if (Pause.activeSelf)
                 {
                     Pause.SetActive(false);
+                    SoundManager.instance.SoundPlay("UI");
                     Time.timeScale = 1;
                 }
                 else
                 {
+                    SoundManager.instance.SoundPlay("UI");
+
                     Pause.SetActive(true);
                     Time.timeScale = 0;
                 }

@@ -34,6 +34,7 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("1-3");
                 break;
             case "1-3":
+                GameManager.Chap1_Check = true;
                 SceneManager.LoadScene("Chapter_Select");
                 break;
             case "2-1":
@@ -49,6 +50,7 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("2-5");
                 break;
             case "2-5":
+                GameManager.Chap2_Check = true;
                 SceneManager.LoadScene("Chapter_Select");
                 break;
             case "3-1":
@@ -61,6 +63,7 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("InGame");
                 break;
             case "InGame":
+                GameManager.Chap3_Check = true;
                 SceneManager.LoadScene("Chapter_Select");
                 break;
 

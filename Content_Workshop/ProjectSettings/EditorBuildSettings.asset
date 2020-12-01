@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: e6a9eafa54bf91f49b2773ef46e5f86e
   - enabled: 1
-    path: Assets/Scenes/InGame.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Chapter_Select.unity
     guid: 88931254bac3bf7499cf092507cf9e1c
   - enabled: 1
@@ -26,24 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1Chap/1-4.unity
     guid: 46e80229ca0b8154b8c1ab8d0b1a511c
-  - enabled: 1
-    path: Assets/Scenes/1Chap/1-5.unity
-    guid: 7d9ca1efbf5b53342979daa215376f6b
-  - enabled: 1
-    path: Assets/Scenes/1Chap/1-6.unity
-    guid: 3c01a2055b7080a408e5c5c2aa90656e
-  - enabled: 1
-    path: Assets/Scenes/1Chap/1-7.unity
-    guid: af91d554f221a894aba6955897267112
-  - enabled: 1
-    path: Assets/Scenes/1Chap/1-8.unity
-    guid: f79bfb34215429341b30fa234038628c
-  - enabled: 1
-    path: Assets/Scenes/1Chap/1-9.unity
-    guid: f2f79ec4e29c0ef48b6ab79a722fb65e
-  - enabled: 1
-    path: Assets/Scenes/1Chap/1-10.unity
-    guid: 6c901449fb00e3a46acf6434c6ab8858
   - enabled: 1
     path: Assets/Scenes/2Chap/2-1.unity
     guid: ee3ea9417cdc1234b8fe79f6403188c0
@@ -60,60 +39,18 @@ EditorBuildSettings:
     path: Assets/Scenes/2Chap/2-4.unity
     guid: 153e48ebe0dbcb04da5b01d7b9086d36
   - enabled: 1
-    path: Assets/Scenes/2Chap/2-6.unity
-    guid: beeda79489e492c4191ab4c5fdf3b3dc
-  - enabled: 1
-    path: Assets/Scenes/2Chap/2-7.unity
-    guid: 4a9dbe0136930d142b404d698eb9f991
-  - enabled: 1
-    path: Assets/Scenes/2Chap/2-8.unity
-    guid: 317dd9b1e51efa240b3f05d8746b97b5
-  - enabled: 1
-    path: Assets/Scenes/2Chap/2-9.unity
-    guid: 988f43eb4a415bd49b8a8c20f022c779
-  - enabled: 1
-    path: Assets/Scenes/2Chap/2-10.unity
-    guid: b3276e0cadf69044e952165367aded57
-  - enabled: 1
     path: Assets/Scenes/3Chap/3-1.unity
     guid: c369676617d68e149a8224dd2a5502bc
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/3Chap/3-2.unity
     guid: 9c0a68357e702034baffe797e45a206c
   - enabled: 1
     path: Assets/Scenes/3Chap/3-3.unity
     guid: b9e842a149f20f04fa3b4a9894416a1a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/3Chap/InGame.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/3Chap/text.unity
+    guid: b6021645c66807c46a40cff3f82e648c
   m_configObjects: {}

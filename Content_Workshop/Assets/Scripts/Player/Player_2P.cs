@@ -68,8 +68,8 @@ public class Player_2P : MonoBehaviour
             case "2-1":
             case "3-1":
             case "InGame":
-                HP = 10;
-                MaxHP = 10;
+                HP = 3;
+                MaxHP = HP;
                 break;
             case "Boss":
                 HP = 10;
@@ -182,7 +182,11 @@ public class Player_2P : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.instance.FadeOut();
         Invoke("SceneLoad", 1.3f);
-        HP = 3;
+        if (SceneManager.GetActiveScene().name == "Boss")
+            HP = 10;
+        else
+            HP = 3;
+        MaxHP = HP;
     }
 
     void SceneLoad()

@@ -69,7 +69,7 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("2-5");
                 break;
             case "2-5":
-                SceneManager.LoadScene("2-6");
+                SceneManager.LoadScene("Chapter_Select");
                 break;
             case "2-6":
                 SceneManager.LoadScene("2-7");
@@ -86,7 +86,21 @@ public class Potal : MonoBehaviour
             case "2-10":
                 SceneManager.LoadScene("Chapter_Select");
                 break;
-
+            case "3-1":
+                SceneManager.LoadScene("3-2");
+                break;
+            case "3-2":
+                SceneManager.LoadScene("3-3");
+                break;
+            case "3-3":
+                SceneManager.LoadScene("3-4");
+                break;
+            case "3-4":
+                SceneManager.LoadScene("3-5");
+                break;
+            case "3-5":
+                SceneManager.LoadScene("Chapter_Select");
+                break;
         }//Chapter_Select
     }
 

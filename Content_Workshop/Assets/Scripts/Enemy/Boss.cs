@@ -228,6 +228,7 @@ public class Boss : MonoBehaviour
 
     public void Damage()
     {
+        SoundManager.instance.SoundPlay("Monster_Damage");
         HP--;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         Invoke("DamageOut", 0.05f);

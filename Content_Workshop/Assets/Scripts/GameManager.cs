@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "1-1" && time >= 11.3f)
         {
             Player1.SetActive(true);
-            Chap_1_Image.SetActive(false);
+             Chap_1_Image.SetActive(false);
 
         }
         if (SceneManager.GetActiveScene().name == "2-1")
@@ -129,50 +129,51 @@ public class GameManager : MonoBehaviour
     {
         switch (SceneManager.GetActiveScene().name)
         {
-            case "1-1":
+            case "1-3":
                 Chap1_Check = true;
-                Chap2_Check = true;
+
                 break;
             case "2-1":
-            case "2-2":
-                Chap3_Check = true;
+            case "2-5":
+                Chap2_Check = true;
                 break;
-            case "3-1":
-            case "InGame":
-
+            case "Boss":
+            case "Title":
+                Chap3_Check = true;
                 break;
         }
         if (SceneManager.GetActiveScene().name != "Chapter_Select")
             return;
 
         if (Chap1_Check)
-            Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[1];
-        else
-            Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[0];
-
-        if (Chap2_Check)
         {
+            Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[1];
             Chap2_Button.interactable = true;
-
-            Chap2_Button.GetComponent<Image>().sprite = Chap_sprite[3];
         }
         else
         {
             Chap2_Button.interactable = false;
+            Chap1_Button.GetComponent<Image>().sprite = Chap_sprite[0];
+        }
 
+        if (Chap2_Check)
+        {
+            Chap2_Button.GetComponent<Image>().sprite = Chap_sprite[3];
+            Chap3_Button.interactable = true;
+        }
+        else
+        {
+            Chap3_Button.interactable = false;
             Chap2_Button.GetComponent<Image>().sprite = Chap_sprite[2];
         }
 
         if (Chap3_Check)
         {
             Chap3_Button.interactable = true;
-
             Chap3_Button.GetComponent<Image>().sprite = Chap_sprite[5];
         }
         else
         {
-            Chap3_Button.interactable = false;
-
             Chap3_Button.GetComponent<Image>().sprite = Chap_sprite[4];
         }
 
@@ -276,6 +277,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Chapter_Select");
         Time.timeScale = 1;
+    }
+    public void UI_Sound()
+    {
+        SoundManager.instance.SoundPlay("UI");
     }
     #endregion
 

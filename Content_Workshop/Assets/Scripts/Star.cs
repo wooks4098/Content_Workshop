@@ -21,7 +21,8 @@ public class Star : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player2")
         {
-            boss.Damage();
+            SoundManager.instance.SoundPlay("2Pitem");
+            boss.Damage("2P");
             gameObject.SetActive(false);
         }
     }
@@ -30,7 +31,8 @@ public class Star : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player2")
         {
-            boss.Damage();
+            SoundManager.instance.SoundPlay("2Pitem");
+            boss.Damage("2P");
             gameObject.SetActive(false);
         }
     }

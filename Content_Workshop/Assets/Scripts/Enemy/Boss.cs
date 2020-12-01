@@ -32,8 +32,8 @@ public class Boss : MonoBehaviour
     public GameObject Die_gam;
     public float DietimeCheck = 0;
     public bool DieMoveCheck = false;
-
-    public Sprite[] sp;
+    bool Die_Sound = false;
+    public Sprite[] sp; // 총알 모양
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D Boss_rigid;//물리
@@ -52,8 +52,6 @@ public class Boss : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-
         Hp_Bar.value = HP / MaxHp;
         if (HP <= 0)
         {
@@ -62,10 +60,6 @@ public class Boss : MonoBehaviour
             Die();
             return;
         }
-
-
-
-
         Reload();
         Change_Phase();
         switch (Boss_Phase)
@@ -79,26 +73,8 @@ public class Boss : MonoBehaviour
         }
     }
 
-    void Die()
-    {
-        DietimeCheck += Time.deltaTime;
-        if(DietimeCheck > 3f)
-        {
-            if(!DieMoveCheck)
-                gameObject.transform.position = Die_Pos.position;
 
-            DieMoveCheck = true;
-            spriteRenderer.color = new Color(1, 1, 1, 0.4f);
-            gameObject.transform.position += Vector3.up * 3f * Time.deltaTime;
-            Die_gam.SetActive(true);
-            Die_gam.transform.position = Die_Pos.position;
-        }
-        else if(DietimeCheck > 0f)
-        {
-            spriteRenderer.color = new Color(0, 0, 0, 0);
-        }
-    }
-
+    #region 공격
     void Phase_1_Standing() // 패턴 1
     {
 
@@ -110,6 +86,8 @@ public class Boss : MonoBehaviour
         if (curShotDelay < maxShotDelay) 
             return;
         int pos = -6;
+        SoundManager.instance.SoundPlay("Boss_attack");
+
         for (int i = 0; i < 3; i++)
         {
             GameObject bullet = bulletManager.MakeBullet("Boss");
@@ -122,7 +100,6 @@ public class Boss : MonoBehaviour
             dirVec += ranVec;
             rigid.AddForce(dirVec.normalized * 10, ForceMode2D.Impulse);
             SpriteRenderer render = bullet.GetComponent<SpriteRenderer>();
-            //render.color = new Color(1, 1, 1, 1);
             render.sprite = sp[0];
 
         }
@@ -147,7 +124,8 @@ public class Boss : MonoBehaviour
             return;
 
         int BulletCount = 20;
-        for(int i = 0; i< BulletCount; i++)
+        SoundManager.instance.SoundPlay("Boss_attack");
+        for (int i = 0; i< BulletCount; i++)
         {
             GameObject bullet = bulletManager.MakeBullet("Boss");//총알 생성
             bullet.transform.position = transform.position + Vector3.up * 1f + Vector3.left * 0.7f;//위치 설정
@@ -225,11 +203,22 @@ public class Boss : MonoBehaviour
         Phase_Curtime = 0;
 
     }
+    #endregion
 
-    public void Damage()
+    #region 데미지
+    public void Damage(string Player)
     {
-        SoundManager.instance.SoundPlay("Monster_Damage");
-        HP--;
+        if (Player == "2P" && HP>= 1) 
+        {
+            SoundManager.instance.SoundPlay("Monster_Damage");
+            HP -= 5;
+        }
+
+        else if(Player == "1P" && HP >= 1)
+        {
+            SoundManager.instance.SoundPlay("Monster_Damage");
+            HP--;
+        }
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         Invoke("DamageOut", 0.05f);
 
@@ -238,11 +227,99 @@ public class Boss : MonoBehaviour
     {
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
+    void Die()
+    {
+
+        DietimeCheck += Time.deltaTime;
+        if (!Die_Sound)
+        {
+            SoundManager.instance.SoundPlay("Monster_Damage");
+            Die_Sound = true;
+        }
+        if (DietimeCheck > 1.5f)
+        {
+            if (!DieMoveCheck)
+            {
+                gameObject.transform.position = Die_Pos.position;
+
+            }
+
+            DieMoveCheck = true;
+           
+
+            Die_gam.transform.position = Die_Pos.position;
+
+            Die_ChangeSprite_Boss();
+            gameObject.transform.position += Vector3.up * 3f * Time.deltaTime;
+            if (DietimeCheck <= 2.5f)
+                return;
+            Die_gam.SetActive(true);
+            if (DietimeCheck <= 4f)
+                return;
+            Die_ChangeSprite();
+            if (DietimeCheck <= 9f)
+                return;
+            GameManager.instance.Chap3_CutScene();
+        }
+        else if (DietimeCheck > 0f)
+        {
+            spriteRenderer.color = new Color(0, 0, 0, 0);
+
+        }
+    }
+
+    public void Die_ChangeSprite_Boss()
+    {
+        StartCoroutine(Die_ChangeSprite_Boss_co());
+    }
+
+    IEnumerator Die_ChangeSprite_Boss_co()
+    {
+        float FadeOut_Time = 0f;
+        float FadeOut_TimeCheck = 3f;
+        Color alpha = new Color(255, 255, 255, 255);
+        while (alpha.a > 0f)
+        {
+            FadeOut_Time += Time.deltaTime / FadeOut_TimeCheck;
+            alpha.a = Mathf.Lerp(1, 0, FadeOut_Time);
+            spriteRenderer.color = alpha;
+            yield return null;
+        }
+        FadeOut_Time = 0;
+        yield return null;
+    }
+    public void Die_ChangeSprite()
+    {
+        StartCoroutine(Die_ChangeSprite_co());
+    }
+
+    IEnumerator Die_ChangeSprite_co()
+    {
+        SpriteRenderer render = Die_gam.GetComponent<SpriteRenderer>();
+        float FadeOut_Time = 0f;
+        float FadeOut_TimeCheck = 3f;
+        Color alpha = new Color(255, 255, 255, 255);
+        while (alpha.a > 0f)
+        {
+            FadeOut_Time += Time.deltaTime / FadeOut_TimeCheck;
+            alpha.a = Mathf.Lerp(1, 0, FadeOut_Time);
+            render.color = alpha;
+            spriteRenderer.color = alpha;
+            yield return null;
+        }
+        FadeOut_Time = 0;
+        yield return null;
+    }
+
+
+    #endregion
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Damage();
+            Damage("1P");
         }
         if (collision.gameObject.tag == "Wall")
         {

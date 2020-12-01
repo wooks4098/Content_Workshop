@@ -70,8 +70,8 @@ public class Monster : MonoBehaviour
     }
     void Damage()
     {
-        
-        SoundManager.instance.SoundPlay("Monster_Damage");
+
+        SoundManager.instance.SoundPlay("Boss_attack");
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         if (HP <= 0)
         {

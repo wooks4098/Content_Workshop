@@ -803,6 +803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2370399126196385578, guid: b27a2fdd7593f164a91b07a74e82f040,
+        type: 3}
+      propertyPath: MaxHP
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2370399126196385582, guid: b27a2fdd7593f164a91b07a74e82f040,
         type: 3}
       propertyPath: m_LocalPosition.x

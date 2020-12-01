@@ -24,7 +24,8 @@ public class Potal : MonoBehaviour
 
     void ChangeScene()
     {
-        switch(SceneManager.GetActiveScene().name)
+
+        switch (SceneManager.GetActiveScene().name)
         {
             case "1-1":
                 SceneManager.LoadScene("1-2");
@@ -33,27 +34,6 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("1-3");
                 break;
             case "1-3":
-                SceneManager.LoadScene("Chapter_Select");
-                break;
-            case "1-4":
-                SceneManager.LoadScene("1-5");
-                break;
-            case "1-5":
-                SceneManager.LoadScene("1-6");
-                break;
-            case "1-6":
-                SceneManager.LoadScene("1-7");
-                break;
-            case "1-7":
-                SceneManager.LoadScene("1-8");
-                break;
-            case "1-8":
-                SceneManager.LoadScene("1-9");
-                break;
-            case "1-9":
-                SceneManager.LoadScene("1-10");
-                break;
-            case "1-10":
                 SceneManager.LoadScene("Chapter_Select");
                 break;
             case "2-1":
@@ -71,21 +51,6 @@ public class Potal : MonoBehaviour
             case "2-5":
                 SceneManager.LoadScene("Chapter_Select");
                 break;
-            case "2-6":
-                SceneManager.LoadScene("2-7");
-                break;
-            case "2-7":
-                SceneManager.LoadScene("2-8");
-                break;
-            case "2-8":
-                SceneManager.LoadScene("2-9");
-                break;
-            case "2-9":
-                SceneManager.LoadScene("2-10");
-                break;
-            case "2-10":
-                SceneManager.LoadScene("Chapter_Select");
-                break;
             case "3-1":
                 SceneManager.LoadScene("3-2");
                 break;
@@ -93,14 +58,12 @@ public class Potal : MonoBehaviour
                 SceneManager.LoadScene("3-3");
                 break;
             case "3-3":
-                SceneManager.LoadScene("3-4");
+                SceneManager.LoadScene("InGame");
                 break;
-            case "3-4":
-                SceneManager.LoadScene("3-5");
-                break;
-            case "3-5":
+            case "InGame":
                 SceneManager.LoadScene("Chapter_Select");
                 break;
+
         }//Chapter_Select
     }
 
@@ -138,6 +101,8 @@ public class Potal : MonoBehaviour
             if (Player1Check)
             {
                 GameManager.instance.FadeOut();
+                SoundManager.instance.SoundPlay("Potal_in");
+
                 Invoke("ChangeScene", 1f);
             }
         }
@@ -146,6 +111,8 @@ public class Potal : MonoBehaviour
             if (Player1Check && Player2Check)
             {
                 GameManager.instance.FadeOut();
+                SoundManager.instance.SoundPlay("Potal_in");
+
                 Invoke("ChangeScene", 1f);
             }
         }

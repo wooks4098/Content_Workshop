@@ -20,7 +20,8 @@ public class Switch : MonoBehaviour
         {
             if (IsUse)
                 return;
-            if(Switch_Color == "Red")
+            SoundManager.instance.SoundPlay("Switch");
+            if (Switch_Color == "Red")
                 anim.Play("Red_Switch");
             else if(Switch_Color == "Blue")
                 anim.Play("Blue_Switch");

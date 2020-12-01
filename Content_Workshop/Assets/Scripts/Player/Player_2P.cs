@@ -67,11 +67,11 @@ public class Player_2P : MonoBehaviour
             case "1-1":
             case "2-1":
             case "3-1":
-            case "InGame":
                 HP = 3;
                 MaxHP = HP;
                 break;
             case "Boss":
+            case "InGame":
                 HP = 10;
                 MaxHP = 10;
                 break;
@@ -131,7 +131,7 @@ public class Player_2P : MonoBehaviour
                 anim.SetBool("IsJump", false);
             }
         }
-        if (Input.GetKey(KeyCode.RightShift) && JumpCount >= 1 && Jump_timecheck >= 0.3f)
+        if ((Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.Keypad0)) && JumpCount >= 1 && Jump_timecheck >= 0.3f)
         {
             if(JumpCount == 2)
                 anim.SetBool("IsJump", true);
@@ -151,7 +151,8 @@ public class Player_2P : MonoBehaviour
     void Damaged(Vector2 TargetPos)
     {
         HP--;
-        if (HP == 0)
+
+        if (HP <= 0)
         {
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
@@ -161,11 +162,12 @@ public class Player_2P : MonoBehaviour
         }
         else
         {
+            //SoundManager.instance.SoundPlay("Player_Damage");
             gameObject.layer = 14;
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
             if (SceneManager.GetActiveScene().name == "Boss" || SceneManager.GetActiveScene().name == "InGame")
-                rigid.AddForce(new Vector2(-1, 1) * 20, ForceMode2D.Impulse);
+                rigid.AddForce(new Vector2(-1, 1) * 15, ForceMode2D.Impulse);
             else
                 rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
             Invoke("OffDamaged", 1.5f);

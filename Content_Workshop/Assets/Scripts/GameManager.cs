@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     public float time = 0;
     public static bool inGameCheck = true; //게임창에 들어갔는지 체크
-
+    public static bool ClearCheck = false;
     void Awake()
     {
         BGM = FindObjectOfType<BGMManager>();
@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         BGM_Play();
+
         FadeIn();
 
     }
@@ -73,23 +74,8 @@ public class GameManager : MonoBehaviour
         Sound_Volum();
     }
 
+    #region 컷신
 
-    public void Show_Howtoplay()
-    {
-        How.SetActive(true);
-    }
-
-    public void Close_HowtoPlay()
-    {
-        if (SceneManager.GetActiveScene().name != "Title")
-            return;
-        if(Input.GetKey(KeyCode.Escape))
-            How.SetActive(false);
-    }
-    public void Close_HowtoPlay_Button()
-    {
-         How.SetActive(false);
-    }
     void Cutscene()
     {
         time += Time.deltaTime;
@@ -123,6 +109,18 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
+    public void Chap3_CutScene()
+    {
+        Player2.SetActive(false);
+        Player1.SetActive(false);
+        ClearCheck = true;
+        //BGM.Play(5);
+        //컷신 보여주는 코드추가
+    }
+
+    #endregion
+
 
     #region 챕터선택 UI
     void Chap_ButtonSprite()//챕터 선택 버튼 스프라이트 변경
@@ -192,12 +190,14 @@ public class GameManager : MonoBehaviour
             case "Chapter_Select":
                 if (inGameCheck)
                 {
-                    BGM.Play(0);
                     inGameCheck = false;
+                    if(!ClearCheck)
+                        BGM.Play(0);
+                    else
+                        BGM.Play(5);
                 }
                 break;
             case "1-1":
-            case "InGame":
                 if (!inGameCheck)
                 {
                     BGM.Play(1);
@@ -206,9 +206,6 @@ public class GameManager : MonoBehaviour
                 break;
    
             case "2-1":
-            case "2-2":
-            case "2-3":
-            case "2-4":
                 if (!inGameCheck)
                 {
                     BGM.Play(2);
@@ -216,13 +213,15 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case "3-1":
-            case "3-2":
-            case "3-3":
                 if (!inGameCheck)
                 {
                     BGM.Play(3);
                     inGameCheck = true;
                 }
+                break;
+            case "InGame":
+                BGM.Play(4);
+                inGameCheck = true;
                 break;
 
         }
@@ -243,6 +242,22 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region UI
+    public void Show_Howtoplay()
+    {
+        How.SetActive(true);
+    }
+
+    public void Close_HowtoPlay()
+    {
+        if (SceneManager.GetActiveScene().name != "Title")
+            return;
+        if (Input.GetKey(KeyCode.Escape))
+            How.SetActive(false);
+    }
+    public void Close_HowtoPlay_Button()
+    {
+        How.SetActive(false);
+    }
     void Show_Pause()
     {
         if (SceneManager.GetActiveScene().name != "Title" || SceneManager.GetActiveScene().name != "Chapter_Select")
@@ -291,6 +306,9 @@ public class GameManager : MonoBehaviour
     }
     public void FadeIn()
     {
+        if (SceneManager.GetActiveScene().name != "Title" && SceneManager.GetActiveScene().name != "Chapter_Select"
+            &&SceneManager.GetActiveScene().name != "1-1")
+            SoundManager.instance.SoundPlay("Potal_out");
         StartCoroutine(Fade("FadeIn"));
     }
 

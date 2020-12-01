@@ -81,6 +81,7 @@ public class Player_1P : MonoBehaviour
                 MaxHP = HP;
                 break;
             case "Boss":
+            case "InGame":
                 HP = 10;
                 MaxHP = HP;
                 break;
@@ -182,8 +183,9 @@ public class Player_1P : MonoBehaviour
     void Damaged(Vector2 TargetPos)
     {
         HP--;
-        if(HP == 0)
+        if (HP <= 0)
         {
+
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
             
@@ -192,11 +194,13 @@ public class Player_1P : MonoBehaviour
         }
         else
         {
+            //SoundManager.instance.SoundPlay("Player_Damage");
+
             gameObject.layer = 14;
             spriteRenderer.color = new Color(1, 1, 1, 0.4f);
             int dirc = transform.position.x - TargetPos.x > 0 ? 1 : -1;
             if (SceneManager.GetActiveScene().name == "Boss" || SceneManager.GetActiveScene().name == "InGame")
-                rigid.AddForce(new Vector2(-1, 1) * 20, ForceMode2D.Impulse);
+                rigid.AddForce(new Vector2(-1, 1) * 15, ForceMode2D.Impulse);
             else
                 rigid.AddForce(new Vector2(dirc, 1) * 10, ForceMode2D.Impulse);
             Invoke("OffDamaged", 1.5f);

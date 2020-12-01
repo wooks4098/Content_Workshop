@@ -1849,17 +1849,27 @@ MonoBehaviour:
   - name: Bubble
     clip: {fileID: 8300000, guid: e7219d34537a036498223116814fdaea, type: 3}
   - name: 1P_Jump
-    clip: {fileID: 8300000, guid: b7db4b9032cba5e45aefe3fb6df4e340, type: 3}
+    clip: {fileID: 8300000, guid: 83c63521b5d59684aad3e8f45a8e64df, type: 3}
   - name: 2P_Jump
-    clip: {fileID: 8300000, guid: 4d7ed9f79e50f13419e89bf05cdbadae, type: 3}
+    clip: {fileID: 8300000, guid: 9cf3c39313abc834f84569644aa90363, type: 3}
   - name: UI
     clip: {fileID: 8300000, guid: ba9d7c5a0095e5e409e83cd903e7ef7a, type: 3}
   - name: Monster_Damage
-    clip: {fileID: 8300000, guid: 31586d6b38ab9e94e94f0f40b3761f61, type: 3}
-  - name: 
-    clip: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 0226efff101818241844d7c01d025124, type: 3}
+  - name: Boss_attack
+    clip: {fileID: 8300000, guid: 47e076003d39c364bb86a3a5d9adcb85, type: 3}
+  - name: Boss_Die
+    clip: {fileID: 8300000, guid: 23210d2ddd1d237488ed559c14e68427, type: 3}
+  - name: Potal_in
+    clip: {fileID: 8300000, guid: dc61d6aea8e9a54458428efaee60616c, type: 3}
+  - name: Potal_out
+    clip: {fileID: 8300000, guid: 12c767cab80c8db4792fa2bebf2445d7, type: 3}
+  - name: Switch
+    clip: {fileID: 8300000, guid: f36def330193cb540808f840764cdc70, type: 3}
+  - name: Player_Damage
+    clip: {fileID: 8300000, guid: c2e946aca265751458a62cb76e7e5569, type: 3}
+  - name: 2Pitem
+    clip: {fileID: 8300000, guid: 781aa10959f8ca3489d294c0ddcc1a1a, type: 3}
   - name: 
     clip: {fileID: 0}
   - name: 
@@ -2450,7 +2460,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.663
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2546,9 +2556,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGMVolum: 1
   Audio:
-  - {fileID: 8300000, guid: 494e4139ccf5036499d262d1f5663cfc, type: 3}
+  - {fileID: 8300000, guid: a9cace52411fdab45b53b45864b1740b, type: 3}
   - {fileID: 8300000, guid: a8de0921387c8ca46bbc810ea3f78f47, type: 3}
   - {fileID: 8300000, guid: 39d7cf3baecf5fc41a3f8c7efd1ca8fd, type: 3}
+  - {fileID: 8300000, guid: 2bdfc3fc26ef2584eaf8343df96276ff, type: 3}
+  - {fileID: 8300000, guid: 2dbbbc09b3c65924e82f59cc5889c872, type: 3}
+  - {fileID: 8300000, guid: 198cc3cbdf1970443846c94698a0c5b5, type: 3}
   - {fileID: 8300000, guid: 8d80b56b186e144428b55281efccd76c, type: 3}
 --- !u!4 &1897011578
 Transform:

@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class Monster : MonoBehaviour
 {
+    public Slider HP_Slider;
+    public float MaxHP;
     public int HP;
     public float Speed;
     bool Die = false;
@@ -21,12 +25,13 @@ public class Monster : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         MoveCheck();
-
+        MaxHP = HP;
         //NextMove = -1;
     }
     private void FixedUpdate()
     {
         //이동체크
+        Hp_Bar();
         if (Die)
             return;
        if(NextMove == -1)
@@ -48,6 +53,23 @@ public class Monster : MonoBehaviour
         }
         //Ani();
     }
+
+    void Hp_Bar()
+    {
+        float hp = HP / MaxHP;
+        Camera m_cam = Camera.main;
+        HP_Slider.value = hp;
+        if (hp == 0)
+            HP_Slider.transform.Find("Fill Area").gameObject.SetActive(false);
+        else
+            HP_Slider.transform.Find("Fill Area").gameObject.SetActive(true);
+        Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1.5f, gameObject.transform.position.z);
+
+        HP_Slider.transform.position = m_cam.WorldToScreenPoint(pos + new Vector3(0f, 0, 0));
+
+
+    }
+
     void Ani()
     {
         if (rigid.velocity.x == 0)

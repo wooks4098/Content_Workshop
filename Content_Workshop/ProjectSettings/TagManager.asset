@@ -16,6 +16,7 @@ TagManager:
   - Foot_Red
   - Cloud_Box
   - Bird_Box
+  - Potal
   layers:
   - Default
   - TransparentFX

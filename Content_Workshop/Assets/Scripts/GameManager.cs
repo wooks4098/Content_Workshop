@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     public Button Chap3_Button;
 
     public GameObject How;
+    public GameObject How_1P;
+    public GameObject How_2P;
+    public GameObject Setting;
 
     public Sprite[] Chap_sprite;
 
@@ -40,12 +43,13 @@ public class GameManager : MonoBehaviour
     {
         BGM = FindObjectOfType<BGMManager>();
         Sound = FindObjectOfType<SoundManager>();
-        if (SceneManager.GetActiveScene().name != "Title" && SceneManager.GetActiveScene().name != "Chapter_Select")
+        if(SceneManager.GetActiveScene().name != "Chapter_Select")
         {
-           
             Sound_Slider.value = Sound.SoundVolum;
             BGM_Slider.value = BGM.BGMVolum;
         }
+
+       
         //if (SceneManager.GetActiveScene().name == "1-1" && Chap_1_ImgCheck)
         //    Chap_1_Image.SetActive(false);
         //Chap_1_ImgCheck = true;
@@ -54,7 +58,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
-
+        
 
     }
 
@@ -76,7 +80,7 @@ public class GameManager : MonoBehaviour
         Sound_Volum();
 
 
-        if (ClearCheck)
+        if (SceneManager.GetActiveScene().name == "InGame" &&ClearCheck)
         {
             Chap3time += Time.deltaTime;
             if (Chap3time >= 24f)
@@ -100,7 +104,7 @@ public class GameManager : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "2-1")
         {
-            if (time > 19)
+            if (time > 19 && time <= 22)
             {
                 Player2.SetActive(true);
                 Player1.SetActive(true);
@@ -179,7 +183,7 @@ public class GameManager : MonoBehaviour
             Chap2_Button.GetComponent<Image>().sprite = Chap_sprite[2];
         }
 
-        if (Chap3_Check)
+        if (ClearCheck)
         {
             Chap3_Button.GetComponent<Image>().sprite = Chap_sprite[5];
         }
@@ -267,13 +271,45 @@ public class GameManager : MonoBehaviour
         if (How.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
         {
             SoundManager.instance.SoundPlay("UI");
+            Show_How_1p();
             How.SetActive(false);
 
         }
     }
+    public void Show_How()
+    {
+        How.SetActive(true);
+    }
+    public void Close_How()
+    {
+        Show_How_1p();
+        How.SetActive(false);
+
+    }
+    public void Show_How_1p()
+    {
+        How_1P.SetActive(true);
+        How_2P.SetActive(false);
+    }
+
+    public void Show_How_2p()
+    {
+        How_2P.SetActive(true);
+        How_1P.SetActive(false);
+    }
+
+
     public void Close_HowtoPlay_Button()
     {
         How.SetActive(false);
+    }
+    public void Show_Title_setting()
+    {
+        Setting.SetActive(true);
+    }
+    public void Close_Title_Setting()
+    {
+        Setting.SetActive(false);
     }
     void Show_Pause()
     {
@@ -283,6 +319,7 @@ public class GameManager : MonoBehaviour
             {
                 if (Pause.activeSelf)
                 {
+                    How.SetActive(false);
                     Pause.SetActive(false);
                     SoundManager.instance.SoundPlay("UI");
                     Time.timeScale = 1;

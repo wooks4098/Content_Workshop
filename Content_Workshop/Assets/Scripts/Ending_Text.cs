@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Ending_Text : MonoBehaviour
 {
     public float time = 0f;
+
     private void Update()
     {
         time += Time.deltaTime;

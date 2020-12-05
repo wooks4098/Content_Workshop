@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 540874815601523832}
   m_Layer: 0
   m_Name: Potal
-  m_TagString: Untagged
+  m_TagString: Potal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

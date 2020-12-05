@@ -19,6 +19,8 @@ public class Player_2P : MonoBehaviour
     public GameObject TileCheck; //플랫폼 체크 위치
     float Jump_timecheck = 0;//점프 쿨타임용
     public int State;//곰돌이 상태 꿈의 균열  0기본 1 Red 2blue
+    public float Cleartime = 0;
+    public bool ClearCheck = false;
 
     Rigidbody2D rigid;//물리
     Animator anim;//애니메이션
@@ -38,6 +40,10 @@ public class Player_2P : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (ClearCheck)
+            Cleartime += Time.deltaTime;
+        if (Cleartime >= 1f)
+            gameObject.SetActive(false);
         Hp_Bar();
         Move();
         switch(State)
@@ -198,7 +204,27 @@ public class Player_2P : MonoBehaviour
 
     #endregion
 
+    public void FadeOut()
+    {
+        StartCoroutine(Fade());
+    }
 
+    IEnumerator Fade()
+    {
+        float FadeOut_Time = 0f;
+        float FadeOut_TimeCheck = 1f;
+        gameObject.SetActive(true);
+        Color alpha = new Color(255, 255, 255, 255);
+        while (alpha.a > 0f)
+        {
+            FadeOut_Time += Time.deltaTime / FadeOut_TimeCheck;
+            alpha.a = Mathf.Lerp(1, 0, FadeOut_Time);
+            spriteRenderer.color = alpha;
+            yield return null;
+        }
+        FadeOut_Time = 0;
+        yield return null;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Monster")
@@ -210,6 +236,11 @@ public class Player_2P : MonoBehaviour
             State = 2;
         if (collision.gameObject.tag == "Foot_Red")
             State = 1;
+        if (collision.gameObject.tag == "Potal")
+        {
+            ClearCheck = true;
+            FadeOut();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -219,6 +250,11 @@ public class Player_2P : MonoBehaviour
             State = 2;
         if (collision.gameObject.tag == "Foot_Red")
             State = 1;
+        if (collision.gameObject.tag == "Potal")
+        {
+            ClearCheck = true;
+            FadeOut();
+        }
     }
 
 }

@@ -93,10 +93,10 @@ public class Boss : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             GameObject bullet = bulletManager.MakeBullet("Boss");
-            bullet.transform.position = transform.position + Vector3.up * 1f;//위치 설정
+            bullet.transform.position = transform.position + Vector3.up * 0.4f;//위치 설정
 
             Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
-            Vector2 dirVec = Player_Pos.transform.position - transform.position + Vector3.up * 1f;
+            Vector2 dirVec = Player_Pos.transform.position - transform.position + Vector3.up * 0.4f;
             Vector2 ranVec = new Vector2(0, pos);
             pos += 6;
             dirVec += ranVec;

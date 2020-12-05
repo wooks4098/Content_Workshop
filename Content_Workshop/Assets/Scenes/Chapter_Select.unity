@@ -665,6 +665,9 @@ MonoBehaviour:
   Chap2_Button: {fileID: 2132852895}
   Chap3_Button: {fileID: 456264402}
   How: {fileID: 0}
+  How_1P: {fileID: 0}
+  How_2P: {fileID: 0}
+  Setting: {fileID: 0}
   Chap_sprite:
   - {fileID: -8547121021627555037, guid: a007de3bdeda7cc4692e71629be14e42, type: 3}
   - {fileID: -732304371105431094, guid: 39f8e5087aff13a48bb0b79369b09007, type: 3}
@@ -1046,7 +1049,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2132852896}
   m_OnClick:
     m_PersistentCalls:
